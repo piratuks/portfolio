@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/piratuks/portfolio/tree/master/app/static/css/main.dfd58e26.css",
-    "main.js": "/piratuks/portfolio/tree/master/app/static/js/main.7993b7ee.js",
-    "static/js/787.1ed0c42c.chunk.js": "/piratuks/portfolio/tree/master/app/static/js/787.1ed0c42c.chunk.js",
-    "index.html": "/piratuks/portfolio/tree/master/app/index.html",
-    "main.dfd58e26.css.map": "/piratuks/portfolio/tree/master/app/static/css/main.dfd58e26.css.map",
-    "main.7993b7ee.js.map": "/piratuks/portfolio/tree/master/app/static/js/main.7993b7ee.js.map",
-    "787.1ed0c42c.chunk.js.map": "/piratuks/portfolio/tree/master/app/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/piratuks/portfolio/static/css/main.dfd58e26.css",
+    "main.js": "/piratuks/portfolio/static/js/main.5cd35078.js",
+    "static/js/787.1ed0c42c.chunk.js": "/piratuks/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "index.html": "/piratuks/portfolio/index.html",
+    "main.dfd58e26.css.map": "/piratuks/portfolio/static/css/main.dfd58e26.css.map",
+    "main.5cd35078.js.map": "/piratuks/portfolio/static/js/main.5cd35078.js.map",
+    "787.1ed0c42c.chunk.js.map": "/piratuks/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dfd58e26.css",
-    "static/js/main.7993b7ee.js"
+    "static/js/main.5cd35078.js"
   ]
 }
