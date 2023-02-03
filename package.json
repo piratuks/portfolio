@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
-  "homepage": "http://piratuks.github.io/portfolio",
+  "homepage": "https://piratuks.github.io/portfolio",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
