@@ -1,4 +1,4 @@
-export const scope = '/piratuks/portfolio';
+export const scope = '/portfolio';
 export const routes = {
   dashboard: `${scope}/dashboard`
 };
