@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "private": true,
   "homepage": "https://piratuks.github.io/portfolio",
   "dependencies": {
@@ -49,7 +49,7 @@
     "lint": "eslint --ext .js,.jsx,ts,tsx .",
     "lint:fix": "eslint --fix --ext .js,.jsx,ts,tsx .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
