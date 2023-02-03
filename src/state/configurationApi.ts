@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
+import { scope } from 'app/constant';
 
 export interface EnvConfig {
   environment: string;
@@ -11,7 +12,7 @@ export const configurationApi = createApi({
   baseQuery: fetchBaseQuery(),
   endpoints: builder => ({
     fetchConfiguration: builder.query<EnvConfig, void>({
-      query: () => '/config.json'
+      query: () => `${scope}/config.json`
     })
   })
 });

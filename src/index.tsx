@@ -1,5 +1,6 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { App } from 'app/App';
+import { scope } from 'app/constant';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -10,9 +11,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 if (process.env.REACT_APP_ENABLE_MOCKS === 'true') {
-  const { worker } = require('mocks/browser');
+  const { worker } = require('./mocks/browser');
   worker.start({
-    onUnhandledRequest: 'bypass'
+    onUnhandledRequest: 'bypass',
+    serviceWorker: {
+      scope: scope,
+      url: `${scope}/mockServiceWorker.js`
+    }
   });
 }
 

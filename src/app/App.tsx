@@ -15,8 +15,15 @@ export const App: FC = () => {
     if (data) dispatch(configurationLoaded(data));
   }, [data]);
 
-  if (error) return <ApiError error={error} />;
-  if (isFetching || !isInitialized) return <Spinner />;
+  let errorElement = null;
 
-  return <AppPage />;
+  if (error) errorElement = <ApiError error={error} />;
+  if (!error && (isFetching || !isInitialized)) return <Spinner />;
+
+  return (
+    <>
+      {errorElement}
+      <AppPage />
+    </>
+  );
 };
