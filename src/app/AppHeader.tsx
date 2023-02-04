@@ -1,11 +1,10 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import { theme } from 'theme';
 
 const HeaderWrapper = styled.div`
   position: relative;
   display: flex;
-  background: ${theme.palette.primary.main};
+  /* background: */
   height: 72px;
   z-index: 2;
   width: 100%;

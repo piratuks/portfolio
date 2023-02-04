@@ -1,4 +1,4 @@
-# portfolio
+# Environment description
 
 - create react app using create-react-app with TypeScript template -> [React](https://create-react-app.dev/docs/getting-started)
 - app is using styled-components -> [StyledComponents](https://styled-components.com/)
@@ -10,7 +10,7 @@
 - navigation is done with React Router [Router](https://reactrouter.com/en/main)
 - node version v19.3.0
 - rect version v18.2.0
-- ui component library [MaterialUI](https://mui.com/material-ui/react-progress/)
+- ui component library [ReactBootstrap](https://react-bootstrap.github.io/)
 - github pages [React](https://create-react-app.dev/docs/deployment/#github-pages) and [404](https://github.com/TheRoro/React-Quiz/blob/main/package.json)
 
 #env

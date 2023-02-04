@@ -5,6 +5,7 @@ export interface EnvConfig {
   environment: string;
   apiEndpoint: string;
   apiVersionPrefix: string;
+  version: string;
 }
 
 export const configurationApi = createApi({

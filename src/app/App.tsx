@@ -1,6 +1,7 @@
-import { ApiError } from 'components/notifications/ApiError';
+import { AlertContainer } from 'components/notifications/Alert/AlertContainer';
 import { Spinner } from 'components/ui/Spinner';
 import { FC, useEffect } from 'react';
+import { apiError } from 'state/alertHelper';
 import { useFetchConfigurationQuery } from 'state/configurationApi';
 import { configurationLoaded, selectIsconfigurationInitialized } from 'state/configurationSlice';
 import { useAppDispatch, useAppSelector } from 'state/configureStore';
@@ -15,15 +16,13 @@ export const App: FC = () => {
     if (data) dispatch(configurationLoaded(data));
   }, [data]);
 
-  let errorElement = null;
-
-  if (error) errorElement = <ApiError error={error} />;
+  if (error) apiError({ error, id: 'CONFIGURATION_ERROR' });
   if (!error && (isFetching || !isInitialized)) return <Spinner />;
 
   return (
-    <>
-      {errorElement}
+    <div className="container mt-3">
+      <AlertContainer />
       <AppPage />
-    </>
+    </div>
   );
 };

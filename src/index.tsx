@@ -1,14 +1,12 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
 import { App } from 'app/App';
 import { scope } from 'app/constant';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { store } from 'state/configureStore';
-import { theme } from 'theme';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
+import './styles/index.css';
 
 if (process.env.REACT_APP_ENABLE_MOCKS === 'true') {
   const { worker } = require('./mocks/browser');
@@ -21,18 +19,15 @@ if (process.env.REACT_APP_ENABLE_MOCKS === 'true') {
   });
 }
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
+        <App />
       </Provider>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 reportWebVitals();
