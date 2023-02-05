@@ -1,12 +1,11 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import { AppContent } from './AppContent';
-import { AppHeader } from './AppHeader';
 
 const AppPageWrapper = styled.div`
   position: relative;
   background-color: whitesmoke;
-  height: 100%;
+  height: 1500px;
   width: 100%;
   ::before {
     content: '';
@@ -28,14 +27,25 @@ const InnerWrapper = styled.div`
   width: 100%;
   margin: auto;
 `;
-
-export const AppPage: FC = () => {
+export interface AppPageProps {
+  sectionRefs: React.MutableRefObject<null | HTMLDivElement>[];
+}
+export const AppPage: FC<AppPageProps> = ({ sectionRefs }) => {
   return (
-    <AppPageWrapper>
-      <InnerWrapper>
-        <AppHeader />
-        <AppContent />
-      </InnerWrapper>
-    </AppPageWrapper>
+    // <AppHeader />
+    <>
+      <AppPageWrapper ref={sectionRefs[0]} id="aboutSection">
+        <InnerWrapper>
+          {/* <AppHeader /> */}
+          <AppContent />
+        </InnerWrapper>
+      </AppPageWrapper>
+      <AppPageWrapper ref={sectionRefs[1]} id="someSection">
+        <InnerWrapper>
+          {/* <AppHeader /> */}
+          <AppContent />
+        </InnerWrapper>
+      </AppPageWrapper>
+    </>
   );
 };

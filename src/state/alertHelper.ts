@@ -11,14 +11,12 @@ interface Props extends IdProps {
   error: FetchBaseQueryError | SerializedError;
 }
 
-const dispatch = useAppDispatch();
-
 export const apiError = ({ error, id }: Props) => {
   let message = 'Something happened durring request';
   if (isSerializedError(error) && error.message) {
     message = error.message;
   }
-
+  const dispatch = useAppDispatch();
   dispatch(
     alertAdd({
       isOpen: true,
@@ -31,6 +29,7 @@ export const apiError = ({ error, id }: Props) => {
 };
 
 export const TechnicalError = ({ id }: IdProps) => {
+  const dispatch = useAppDispatch();
   dispatch(
     alertAdd({
       isOpen: true,

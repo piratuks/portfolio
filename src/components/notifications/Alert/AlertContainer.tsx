@@ -6,7 +6,7 @@ import { Alert } from './Alert';
 
 export const AlertContainer: FC = () => {
   const alerts = useAppSelector(selectAlerts);
-  console.log(alerts);
+
   return (
     <ToastContainer position={'bottom-start'}>
       {alerts.map(alert => {
