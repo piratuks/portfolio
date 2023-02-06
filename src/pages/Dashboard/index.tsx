@@ -19,6 +19,8 @@ export const DashboardPage: FC<AppProps> = ({ sectionRefs }) => {
       <About sectionRef={sectionRefs[1]} />
       <Services sectionRef={sectionRefs[2]} />
       <Skills />
+      <div ref={sectionRefs[3]}></div>
+      <div ref={sectionRefs[4]}></div>
       {/* //resume -> 3 */}
       {/* //portfolio -> 4 */}
       <Testmonial sectionRef={sectionRefs[5]} />

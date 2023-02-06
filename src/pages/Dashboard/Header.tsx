@@ -153,7 +153,7 @@ export const Header: FC<Props> = ({ sectionRef, contactsRef }) => {
             ]}
           />
 
-          <SocialLinks />
+          <SocialLinks switchColors={false} className={'mt-4'} />
         </InfoWrapper>
         <ImgWrapper>
           <AvatarImg src={avatar} alt="Evaldas Laureckas" />

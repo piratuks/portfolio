@@ -7,6 +7,7 @@ import { useFetchConfigurationQuery } from 'state/configurationApi';
 import { configurationLoaded, selectIsconfigurationInitialized } from 'state/configurationSlice';
 import { useAppDispatch, useAppSelector } from 'state/configureStore';
 import { ErrorCode } from 'state/errorCode';
+import { AppFooter } from './AppFooter';
 import { AppHeader } from './AppHeader';
 import { AppRoutes } from './AppRoutes';
 
@@ -33,6 +34,7 @@ export const App: FC = () => {
         <AlertContainer />
         <AppRoutes sectionRefs={sectionRefs} />
       </Container>
+      <AppFooter sectionRef={sectionRefs[0]} />
     </>
   );
 };

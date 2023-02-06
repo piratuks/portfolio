@@ -1,4 +1,4 @@
-import logo from 'assets/logo.svg';
+import logoOrange from 'assets/logo-orange.svg';
 import { FC } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import useScrollSpy from 'react-use-scrollspy';
@@ -58,7 +58,7 @@ export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
         <Container>
           <Navbar.Brand href="#">
             <LogoImg
-              src={logo}
+              src={logoOrange}
               alt="Evaldas Laureckas Software Development"
               onClick={() => {
                 sectionRefs[0].current?.scrollIntoView();
