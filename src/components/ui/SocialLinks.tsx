@@ -34,19 +34,19 @@ const StyledLink = styled(Link)`
 export const SocialLinks = () => {
   return (
     <Socials className="mt-4">
-      <StyledLink to="https://www.facebook.com/evaldas.laureckas/" target={'blank'}>
+      <StyledLink to="https://www.facebook.com/evaldas.laureckas/" target="_blank">
         <Facebook />
       </StyledLink>
-      <StyledLink to="https://www.instagram.com/laureckas.evaldas/" target={'blank'}>
+      <StyledLink to="https://www.instagram.com/laureckas.evaldas/" target="_blank">
         <Instagram />
       </StyledLink>
-      <StyledLink to="https://github.com/piratuks/" target={'blank'}>
+      <StyledLink to="https://github.com/piratuks/" target="_blank">
         <Github />
       </StyledLink>
-      <StyledLink to="https://twitter.com/ELaureckas/" target={'blank'}>
+      <StyledLink to="https://twitter.com/ELaureckas/" target="_blank">
         <Twitter />
       </StyledLink>
-      <StyledLink to="https://www.linkedin.com/in/evaldas123456/" target={'blank'}>
+      <StyledLink to="https://www.linkedin.com/in/evaldas123456/" target="_blank">
         <Linkedin />
       </StyledLink>
     </Socials>
