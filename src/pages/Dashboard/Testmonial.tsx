@@ -1,3 +1,4 @@
+import { PageProps } from 'app/App';
 import { StyledCard } from 'components/ui/StyledCard';
 import { StyledSection } from 'components/ui/StyledSection';
 import { StyledSubTitle } from 'components/ui/StyledSubTitle';
@@ -5,7 +6,6 @@ import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 import styled from 'styled-components';
-import { DashboardPageProps } from '.';
 
 const StyledCarousel = styled(Carousel)`
   .carousel-indicators {
@@ -31,7 +31,7 @@ const StyledTitleH1 = styled.h1`
   font-size: 20px;
 `;
 
-export const Testmonial: FC<DashboardPageProps> = ({ sectionRef }) => {
+export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
   return (
     <StyledSection sectionRef={sectionRef}>
       <Container className="text-center">

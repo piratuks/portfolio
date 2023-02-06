@@ -8,7 +8,7 @@ export const AlertContainer: FC = () => {
   const alerts = useAppSelector(selectAlerts);
 
   return (
-    <ToastContainer position={'bottom-start'}>
+    <ToastContainer position={'bottom-start'} className="position-fixed">
       {alerts.map(alert => {
         return (
           <Alert

@@ -1,10 +1,10 @@
 import logoWhite from 'assets/logo-white.svg';
 import { StyledSocialLinks } from 'components/ui/StyledSocialLinks';
-import { DashboardPageProps } from 'pages/Dashboard';
 import { FC } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FaRegCopyright } from 'react-icons/fa';
 import styled from 'styled-components';
+import { PageProps } from './App';
 
 const StyledFooterWrapper = styled.footer`
   background: #ff7a57;
@@ -31,7 +31,7 @@ const StyledNewSocialLinks = styled(StyledSocialLinks)`
   align-items: center;
 `;
 
-export const AppFooter: FC<DashboardPageProps> = ({ sectionRef }) => {
+export const AppFooter: FC<PageProps> = ({ sectionRef }) => {
   return (
     <StyledFooterWrapper>
       <Container>

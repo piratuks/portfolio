@@ -1,3 +1,4 @@
+import { PageProps } from 'app/App';
 import { scope } from 'app/constant';
 import { BtnType, StyledButtons } from 'components/ui/StyledButtons';
 import { StyledSection } from 'components/ui/StyledSection';
@@ -7,13 +8,12 @@ import { FC } from 'react';
 import { Col, Container, ListGroup, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 import { fileDownload } from 'utils/functionUtils';
-import { DashboardPageProps } from '.';
 
 const StyledListItem = styled(ListGroup.Item)`
   color: #495057;
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
 `;
-export const About: FC<DashboardPageProps> = ({ sectionRef }) => {
+export const About: FC<PageProps> = ({ sectionRef }) => {
   return (
     <StyledSection className={'mt-3'} sectionRef={sectionRef}>
       <Container className="mt-5">

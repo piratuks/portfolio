@@ -1,4 +1,4 @@
-import { DashboardPageProps } from 'pages/Dashboard';
+import { PageProps } from 'app/App';
 import { FC, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
@@ -19,7 +19,7 @@ const StyledSectionInnerWrapper = styled.div`
     background: white;
   }
 `;
-interface Props extends PropsWithChildren, DashboardPageProps {
+interface Props extends PropsWithChildren, PageProps {
   className?: string;
 }
 export const StyledSection: FC<Props> = ({ className, children, sectionRef }) => {

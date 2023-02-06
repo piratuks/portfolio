@@ -14,6 +14,9 @@ import { AppRoutes } from './AppRoutes';
 export interface AppProps {
   sectionRefs: React.MutableRefObject<null | HTMLDivElement>[];
 }
+export interface PageProps {
+  sectionRef?: React.MutableRefObject<null | HTMLDivElement>;
+}
 export const App: FC = () => {
   const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
   const { data, isFetching, error } = useFetchConfigurationQuery();
@@ -31,8 +34,8 @@ export const App: FC = () => {
     <>
       <AppHeader sectionRefs={sectionRefs} />
       <Container className="mt-3">
-        <AlertContainer />
         <AppRoutes sectionRefs={sectionRefs} />
+        <AlertContainer />
       </Container>
       <AppFooter sectionRef={sectionRefs[0]} />
     </>

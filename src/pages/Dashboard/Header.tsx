@@ -1,3 +1,4 @@
+import { PageProps } from 'app/App';
 import avatar from 'assets/avatar.svg';
 import { BtnType, StyledButtons } from 'components/ui/StyledButtons';
 import { StyledSocialLinks } from 'components/ui/StyledSocialLinks';
@@ -7,7 +8,6 @@ import { FC } from 'react';
 import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import { fileDownload } from 'utils/functionUtils';
-import { DashboardPageProps } from '.';
 
 const HeaderWrapper = styled.header`
   color: #495057;
@@ -125,7 +125,7 @@ const WidgetItem = styled.div`
   }
 `;
 
-export interface Props extends DashboardPageProps {
+export interface Props extends PageProps {
   contactsRef: React.MutableRefObject<null | HTMLDivElement>;
 }
 export const Header: FC<Props> = ({ sectionRef, contactsRef }) => {

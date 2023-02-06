@@ -6,9 +6,6 @@ import { Services } from './Services';
 import { Skills } from './Skills';
 import { Testmonial } from './Testmonial';
 
-export interface DashboardPageProps {
-  sectionRef?: React.MutableRefObject<null | HTMLDivElement>;
-}
 export interface ContainerProps extends PropsWithChildren {
   isContainer: boolean;
 }

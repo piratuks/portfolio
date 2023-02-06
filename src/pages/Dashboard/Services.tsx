@@ -1,3 +1,4 @@
+import { PageProps } from 'app/App';
 import backend from 'assets/backend.svg';
 import frontend from 'assets/frontend.svg';
 import fullstack from 'assets/fullstack.svg';
@@ -9,7 +10,6 @@ import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
-import { DashboardPageProps } from '.';
 
 const StyledCardTitle = styled(StyledTitle)`
   color: #ff7a57;
@@ -31,7 +31,7 @@ const ServiceImg = styled.img`
   transition: all, 0.3s;
 `;
 
-export const Services: FC<DashboardPageProps> = ({ sectionRef }) => {
+export const Services: FC<PageProps> = ({ sectionRef }) => {
   return (
     <StyledSection sectionRef={sectionRef}>
       <Container className="text-center">
