@@ -1,6 +1,7 @@
 import { AppProps } from 'app/App';
 import { FC, PropsWithChildren } from 'react';
 import { About } from './About';
+import { Contacts } from './Contacts';
 import { Header } from './Header';
 import { Services } from './Services';
 import { Skills } from './Skills';
@@ -21,7 +22,7 @@ export const DashboardPage: FC<AppProps> = ({ sectionRefs }) => {
       {/* //resume -> 3 */}
       {/* //portfolio -> 4 */}
       <Testmonial sectionRef={sectionRefs[5]} />
-      {/* //contacts -> 6 */}
+      <Contacts sectionRef={sectionRefs[6]} />
     </>
   );
 };

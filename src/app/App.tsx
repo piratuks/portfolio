@@ -18,7 +18,15 @@ export interface PageProps {
   sectionRef?: React.MutableRefObject<null | HTMLDivElement>;
 }
 export const App: FC = () => {
-  const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
+  const sectionRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null)
+  ];
   const { data, isFetching, error } = useFetchConfigurationQuery();
   const dispatch = useAppDispatch();
   const isInitialized = useAppSelector(selectIsconfigurationInitialized);
@@ -37,7 +45,7 @@ export const App: FC = () => {
         <AppRoutes sectionRefs={sectionRefs} />
         <AlertContainer />
       </Container>
-      <AppFooter sectionRef={sectionRefs[0]} />
+      <AppFooter sectionRef={sectionRefs[0]} contactsRef={sectionRefs[6]} />
     </>
   );
 };

@@ -125,10 +125,10 @@ const WidgetItem = styled.div`
   }
 `;
 
-export interface Props extends PageProps {
+export interface SectionWithContactsProps extends PageProps {
   contactsRef: React.MutableRefObject<null | HTMLDivElement>;
 }
-export const Header: FC<Props> = ({ sectionRef, contactsRef }) => {
+export const Header: FC<SectionWithContactsProps> = ({ sectionRef, contactsRef }) => {
   return (
     <HeaderWrapper ref={sectionRef}>
       <StyledContainer>

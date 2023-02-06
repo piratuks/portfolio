@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Facebook, Github, Instagram, Linkedin, Twitter } from 'react-bootstrap-icons';
+import { TfiEmail } from 'react-icons/tfi';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -62,9 +63,15 @@ export const StyledSocialLinks: FC<Props> = ({ switchColors, className }) => {
       <StyledLinkElement to="https://www.linkedin.com/in/evaldas123456/" target="_blank">
         <Linkedin />
       </StyledLinkElement>
-      {/* <StyledLinkElement to="https://www.linkedin.com/in/evaldas123456/" target="_blank">
-        <Linkedin /> MAil
-      </StyledLinkElement> */}
+      <StyledLinkElement
+        to="#"
+        onClick={e => {
+          window.location.href = 'mailto:evaldas.laureckas@gmail.com';
+          e.preventDefault();
+        }}
+      >
+        <TfiEmail />
+      </StyledLinkElement>
     </StyledSocials>
   );
 };
