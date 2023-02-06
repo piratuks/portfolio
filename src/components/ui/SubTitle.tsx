@@ -17,5 +17,5 @@ const SubTitleElementContainer = styled(SubTitleElement)`
 export const SubTitle: FC<ContainerProps> = ({ isContainer, children }) => {
   let StyledSubTitleElement = SubTitleElement;
   if (isContainer) StyledSubTitleElement = SubTitleElementContainer;
-  return <StyledSubTitleElement>{children}</StyledSubTitleElement>;
+  return <StyledSubTitleElement className="subtitle">{children}</StyledSubTitleElement>;
 };

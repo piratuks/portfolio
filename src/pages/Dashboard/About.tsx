@@ -16,8 +16,8 @@ const StyledListItem = styled(ListGroup.Item)`
 
 export const About: FC<DashboardPageProps> = ({ sectionRef }) => {
   return (
-    <StyledSection className={'mt-3'}>
-      <Container className="mt-5" ref={sectionRef}>
+    <StyledSection className={'mt-3'} sectionRef={sectionRef}>
+      <Container className="mt-5">
         <Row className="text-center text-md-start">
           <Col md={3}>
             <img

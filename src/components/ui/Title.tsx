@@ -14,8 +14,12 @@ const TitleElementContainer = styled(TitleElement)`
   font-size: 74px;
   font-weight: bold;
 `;
-export const Title: FC<ContainerProps> = ({ isContainer, children }) => {
+
+interface Props extends ContainerProps {
+  className?: string;
+}
+export const Title: FC<Props> = ({ isContainer, children, className }) => {
   let StyledTitleElement = TitleElement;
   if (isContainer) StyledTitleElement = TitleElementContainer;
-  return <StyledTitleElement>{children}</StyledTitleElement>;
+  return <StyledTitleElement className={className ?? ''}>{children}</StyledTitleElement>;
 };

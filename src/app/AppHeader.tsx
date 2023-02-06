@@ -44,7 +44,7 @@ const SyledNavLink = styled(Nav.Link)`
 export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
   const activeSection = useScrollSpy({
     sectionElementRefs: sectionRefs,
-    offsetPx: -500
+    offsetPx: -150
   });
   const navActiveSection = useScrollSpy({
     sectionElementRefs: [sectionRefs[0]],
@@ -56,7 +56,7 @@ export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
     <Wrapper>
       <StyledNavbar expand="lg" fixed="top" className={navActiveSection === 0 ? 'affix' : ''}>
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="#">
             <LogoImg
               src={logo}
               alt="Evaldas Laureckas Software Development"
@@ -84,19 +84,44 @@ export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
               >
                 About
               </SyledNavLink>
-              <SyledNavLink href="#services" className={activeSection === 2 ? 'active' : ''}>
+              <SyledNavLink
+                className={activeSection === 2 ? 'active' : ''}
+                onClick={() => {
+                  sectionRefs[2].current?.scrollIntoView();
+                }}
+              >
                 Services
               </SyledNavLink>
-              <SyledNavLink href="#resume" className={activeSection === 3 ? 'active' : ''}>
+              <SyledNavLink
+                className={activeSection === 3 ? 'active' : ''}
+                onClick={() => {
+                  sectionRefs[3].current?.scrollIntoView();
+                }}
+              >
                 Resume
               </SyledNavLink>
-              <SyledNavLink href="#portfolio" className={activeSection === 4 ? 'active' : ''}>
+              <SyledNavLink
+                className={activeSection === 4 ? 'active' : ''}
+                onClick={() => {
+                  sectionRefs[4].current?.scrollIntoView();
+                }}
+              >
                 Portfolio
               </SyledNavLink>
-              <SyledNavLink href="#testmonial" className={activeSection === 5 ? 'active' : ''}>
+              <SyledNavLink
+                className={activeSection === 5 ? 'active' : ''}
+                onClick={() => {
+                  sectionRefs[5].current?.scrollIntoView();
+                }}
+              >
                 Testmonial
               </SyledNavLink>
-              <SyledNavLink href="#contacts" className={activeSection === 6 ? 'active' : ''}>
+              <SyledNavLink
+                className={activeSection === 6 ? 'active' : ''}
+                onClick={() => {
+                  sectionRefs[6].current?.scrollIntoView();
+                }}
+              >
                 Contacts
               </SyledNavLink>
               <SyledNavLink href="#">{/* theme toggle */}</SyledNavLink>

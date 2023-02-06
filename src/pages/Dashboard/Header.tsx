@@ -125,7 +125,10 @@ const WidgetItem = styled.div`
   }
 `;
 
-export const Header: FC<DashboardPageProps> = ({ sectionRef }) => {
+export interface Props extends DashboardPageProps {
+  contactsRef: React.MutableRefObject<null | HTMLDivElement>;
+}
+export const Header: FC<Props> = ({ sectionRef, contactsRef }) => {
   return (
     <HeaderWrapper ref={sectionRef}>
       <StyledContainer>
@@ -137,7 +140,11 @@ export const Header: FC<DashboardPageProps> = ({ sectionRef }) => {
           <StyledButtons
             className={'pt-3'}
             buttons={[
-              { handleClick: () => () => {}, type: BtnType.primary, caption: 'HIRE ME' },
+              {
+                handleClick: () => () => contactsRef.current?.scrollIntoView(),
+                type: BtnType.primary,
+                caption: 'HIRE ME'
+              },
               {
                 handleClick: () => () => fileDownload(),
                 type: BtnType.dark,
