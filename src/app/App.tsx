@@ -14,7 +14,7 @@ export interface AppProps {
   sectionRefs: React.MutableRefObject<null | HTMLDivElement>[];
 }
 export const App: FC = () => {
-  const sectionRefs = [useRef(null), useRef(null), useRef(null)];
+  const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
   const { data, isFetching, error } = useFetchConfigurationQuery();
   const dispatch = useAppDispatch();
   const isInitialized = useAppSelector(selectIsconfigurationInitialized);

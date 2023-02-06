@@ -21,7 +21,7 @@ export const alertSlice = createSlice({
     alertRemove: (state, action: PayloadAction<string>) => {
       state.list = state.list.filter(alertItem => alertItem.id !== action.payload);
     },
-    alertsClear: (state, _action: PayloadAction<void>) => {
+    alertsClear: state => {
       state.list = initialState.list;
     }
   }

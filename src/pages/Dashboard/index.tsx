@@ -4,6 +4,7 @@ import { About } from './About';
 import { Header } from './Header';
 import { Services } from './Services';
 import { Skills } from './Skills';
+import { Testmonial } from './Testmonial';
 
 export interface DashboardPageProps {
   sectionRef?: React.MutableRefObject<null | HTMLDivElement>;
@@ -18,6 +19,10 @@ export const DashboardPage: FC<AppProps> = ({ sectionRefs }) => {
       <About sectionRef={sectionRefs[1]} />
       <Services sectionRef={sectionRefs[2]} />
       <Skills />
+      {/* //resume -> 3 */}
+      {/* //portfolio -> 4 */}
+      <Testmonial sectionRef={sectionRefs[5]} />
+      {/* //contacts -> 6 */}
     </>
   );
 };

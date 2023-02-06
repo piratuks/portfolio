@@ -34,6 +34,27 @@ const Wrapper = styled.div`
   .btn-dark:not(:disabled):not(.disabled).active:focus {
     box-shadow: 0 0 0 0.2rem ${hexToRgba('#52585d', '0.5')};
   }
+
+  .btn-primary:focus,
+  .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem ${hexToRgba('#DE6D50', '0.5')};
+  }
+  .btn-primary.disabled,
+  .btn-primary:disabled {
+    color: #fff;
+    background-color: ${LightenDarkenColor('#ff7a57', 30)};
+    border-color: ${LightenDarkenColor('#ff7a57', 40)};
+  }
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .btn-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: ${LightenDarkenColor('#ff7a57', -20)};
+    border-color: ${LightenDarkenColor('#ff7a57', 40)};
+  }
+  .btn-primary:not(:disabled):not(.disabled):active:focus,
+  .btn-primary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem ${hexToRgba('#DE6D50 ', '0.5')};
+  }
 `;
 const StyledButton = styled(Button)`
   border-radius: 50px;
