@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import useScrollSpy from 'react-use-scrollspy';
 import styled from 'styled-components';
-import { AppPageProps } from './AppPage';
+import { AppProps } from './App';
 
 const Wrapper = styled.div`
   .navbar.affix {
@@ -21,11 +21,8 @@ const StyledNavbar = styled(Navbar)`
       padding: 0 20px;
     }
   }
-  .affix {
-    box-shadow: 0 6px 15px rgba(206, 212, 218, 0.3);
-  }
 `;
-const Logo = styled.img`
+const LogoImg = styled.img`
   width: 90px;
   -webkit-filter: drop-shadow(1px 2px 25px rgba(206, 212, 218, 0.9));
   filter: drop-shadow(1px 2px 25px rgba(206, 212, 218, 0.9));
@@ -44,7 +41,7 @@ const SyledNavLink = styled(Nav.Link)`
   transition: all 0.3s;
 `;
 
-export const AppHeader: FC<AppPageProps> = ({ sectionRefs }) => {
+export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
   const activeSection = useScrollSpy({
     sectionElementRefs: sectionRefs,
     offsetPx: -150,
@@ -61,7 +58,7 @@ export const AppHeader: FC<AppPageProps> = ({ sectionRefs }) => {
       <StyledNavbar expand="lg" fixed="top" className={navActiveSection === 0 ? 'affix' : ''}>
         <Container>
           <Navbar.Brand href="#home">
-            <Logo src={logo} alt="Evaldas Laureckas Software Development" />
+            <LogoImg src={logo} alt="Evaldas Laureckas Software Development" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
@@ -93,9 +90,5 @@ export const AppHeader: FC<AppPageProps> = ({ sectionRefs }) => {
         </Container>
       </StyledNavbar>
     </Wrapper>
-
-    // <nav className="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
-
-    // </nav>
   );
 };

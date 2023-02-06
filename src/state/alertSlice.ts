@@ -5,15 +5,12 @@ import { RootState } from './configureStore';
 export interface AlertPropsExtension extends AlertProps {
   id: string;
 }
-
 export interface AlertState {
   list: AlertPropsExtension[];
 }
-
 const initialState: AlertState = {
   list: []
 };
-
 export const alertSlice = createSlice({
   name: 'alert',
   initialState,

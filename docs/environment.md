@@ -18,6 +18,10 @@
   - https://www.free-css.com/free-css-templates/page287/steller
   - https://themewagon.github.io/meyawo/?_ga=2.212626320.58477936.1675616620-486613431.1675438019
 - using scroll spy [Spy](https://www.npmjs.com/package/react-use-scrollspy)
+- color management
+  - [Lighten-Darken](https://www.npmjs.com/package/lighten-darken-color)
+  - [Converted](https://www.npmjs.com/package/hex-to-rgba)
+- icons [ReactBootstrap](https://www.npmjs.com/package/react-bootstrap-icons) and [ReactIcons](https://react-icons.github.io/react-icons/)
 
 #env
 

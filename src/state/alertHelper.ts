@@ -10,7 +10,6 @@ interface IdProps {
 interface Props extends IdProps {
   error: FetchBaseQueryError | SerializedError;
 }
-
 export const apiError = ({ error, id }: Props) => {
   let message = 'Something happened durring request';
   if (isSerializedError(error) && error.message) {
@@ -27,7 +26,6 @@ export const apiError = ({ error, id }: Props) => {
     })
   );
 };
-
 export const TechnicalError = ({ id }: IdProps) => {
   const dispatch = useAppDispatch();
   dispatch(

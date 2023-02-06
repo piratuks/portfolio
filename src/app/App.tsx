@@ -1,13 +1,17 @@
 import { AlertContainer } from 'components/notifications/Alert/AlertContainer';
 import { Loader } from 'components/ui/Loader';
 import { FC, useEffect, useRef } from 'react';
+import { Container } from 'react-bootstrap';
 import { apiError } from 'state/alertHelper';
 import { useFetchConfigurationQuery } from 'state/configurationApi';
 import { configurationLoaded, selectIsconfigurationInitialized } from 'state/configurationSlice';
 import { useAppDispatch, useAppSelector } from 'state/configureStore';
 import { AppHeader } from './AppHeader';
-import { AppPage } from './AppPage';
+import { AppRoutes } from './AppRoutes';
 
+export interface AppProps {
+  sectionRefs: React.MutableRefObject<null | HTMLDivElement>[];
+}
 export const App: FC = () => {
   const sectionRefs = [useRef(null), useRef(null), useRef(null)];
   const { data, isFetching, error } = useFetchConfigurationQuery();
@@ -24,10 +28,10 @@ export const App: FC = () => {
   return (
     <>
       <AppHeader sectionRefs={sectionRefs} />
-      <div className="container mt-3">
+      <Container className="mt-3">
         <AlertContainer />
-        <AppPage sectionRefs={sectionRefs} />
-      </div>
+        <AppRoutes sectionRefs={sectionRefs} />
+      </Container>
     </>
   );
 };
