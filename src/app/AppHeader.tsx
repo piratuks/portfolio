@@ -44,8 +44,7 @@ const SyledNavLink = styled(Nav.Link)`
 export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
   const activeSection = useScrollSpy({
     sectionElementRefs: sectionRefs,
-    offsetPx: -150,
-    activeSectionDefault: -1
+    offsetPx: -500
   });
   const navActiveSection = useScrollSpy({
     sectionElementRefs: [sectionRefs[0]],
@@ -58,15 +57,31 @@ export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
       <StyledNavbar expand="lg" fixed="top" className={navActiveSection === 0 ? 'affix' : ''}>
         <Container>
           <Navbar.Brand href="#home">
-            <LogoImg src={logo} alt="Evaldas Laureckas Software Development" />
+            <LogoImg
+              src={logo}
+              alt="Evaldas Laureckas Software Development"
+              onClick={() => {
+                sectionRefs[0].current?.scrollIntoView();
+              }}
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <SyledNav className="ml-auto">
-              <SyledNavLink href="#home" className={activeSection === 0 ? 'active' : ''}>
+            <SyledNav className="ms-auto">
+              <SyledNavLink
+                className={activeSection === 0 ? 'active' : ''}
+                onClick={() => {
+                  sectionRefs[0].current?.scrollIntoView();
+                }}
+              >
                 Home
               </SyledNavLink>
-              <SyledNavLink href="#about" className={activeSection === 1 ? 'active' : ''}>
+              <SyledNavLink
+                className={activeSection === 1 ? 'active' : ''}
+                onClick={() => {
+                  sectionRefs[1].current?.scrollIntoView();
+                }}
+              >
                 About
               </SyledNavLink>
               <SyledNavLink href="#services" className={activeSection === 2 ? 'active' : ''}>

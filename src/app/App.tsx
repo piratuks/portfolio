@@ -6,6 +6,7 @@ import { apiError } from 'state/alertHelper';
 import { useFetchConfigurationQuery } from 'state/configurationApi';
 import { configurationLoaded, selectIsconfigurationInitialized } from 'state/configurationSlice';
 import { useAppDispatch, useAppSelector } from 'state/configureStore';
+import { ErrorCode } from 'state/errorCode';
 import { AppHeader } from './AppHeader';
 import { AppRoutes } from './AppRoutes';
 
@@ -22,7 +23,7 @@ export const App: FC = () => {
     if (data) dispatch(configurationLoaded(data));
   }, [data]);
 
-  if (error) apiError({ error, id: 'CONFIGURATION_ERROR' });
+  if (error) apiError({ error, id: ErrorCode.configError });
   if (!error && (isFetching || !isInitialized)) return <Loader />;
 
   return (

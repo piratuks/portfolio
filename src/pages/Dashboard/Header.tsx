@@ -1,4 +1,3 @@
-import { scope } from 'app/constant';
 import avatar from 'assets/avatar.svg';
 import { SocialLinks } from 'components/ui/SocialLinks';
 import { BtnType, StyledButtons } from 'components/ui/StyledButtons';
@@ -6,8 +5,8 @@ import { SubTitle } from 'components/ui/SubTitle';
 import { Title } from 'components/ui/Title';
 import { FC } from 'react';
 import { Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { fileDownload } from 'utils/functionUtils';
 import { DashboardPageProps } from '.';
 
 const HeaderWrapper = styled.header`
@@ -125,39 +124,8 @@ const WidgetItem = styled.div`
     }
   }
 `;
-const StyledLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 5px;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  border-radius: 50%;
-  border: 2px solid #ff7a57;
-  color: #ff7a57;
-  text-align: center;
-  line-height: 40px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-decoration: none;
-  :hover {
-    background: #ff7a57;
-    color: #fff;
-  }
-`;
 
 export const Header: FC<DashboardPageProps> = ({ sectionRef }) => {
-  const fileDownload = () => {
-    console.log('sadasd');
-    const link = document.createElement('a');
-    link.href = `${scope}/CV Evaldas Laureckas.pdf`;
-    link.target = 'blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <HeaderWrapper ref={sectionRef}>
       <StyledContainer>

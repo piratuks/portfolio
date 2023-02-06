@@ -69,8 +69,9 @@ export enum BtnType {
   dark = 'dark'
 }
 interface Props {
-  className: string;
+  className?: string;
   buttons: Array<{
+    className?: string;
     handleClick: () => void;
     type: BtnType;
     caption: string;
@@ -78,17 +79,29 @@ interface Props {
 }
 export const StyledButtons: FC<Props> = ({ className, buttons }) => {
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className ?? ''}>
       {buttons.map((button, index) => {
         if (button.type === BtnType.dark)
           return (
-            <StyledDarkButton variant="dark" size="lg" onClick={button.handleClick()} key={index}>
+            <StyledDarkButton
+              className={button.className ?? ''}
+              variant="dark"
+              size="lg"
+              onClick={button.handleClick()}
+              key={index}
+            >
               {button.caption}
             </StyledDarkButton>
           );
         else if (button.type === BtnType.primary)
           return (
-            <StyledPrimaryButton variant="primary" size="lg" key={index} onClick={button.handleClick()}>
+            <StyledPrimaryButton
+              className={button.className ?? ''}
+              variant="primary"
+              size="lg"
+              key={index}
+              onClick={button.handleClick()}
+            >
               {button.caption}
             </StyledPrimaryButton>
           );
