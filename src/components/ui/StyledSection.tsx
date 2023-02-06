@@ -2,7 +2,7 @@ import { DashboardPageProps } from 'pages/Dashboard';
 import { FC, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
-const SectionOuterWrapper = styled.section`
+const StyledSectionOuterWrapper = styled.section`
   .bg-white {
     background-color: #fff;
   }
@@ -11,7 +11,7 @@ const SectionOuterWrapper = styled.section`
     background: white;
   }
 `;
-const SectionInnerWrapper = styled.div`
+const StyledSectionInnerWrapper = styled.div`
   color: #495057;
   position: relative;
   padding: 5rem 0;
@@ -24,8 +24,8 @@ interface Props extends PropsWithChildren, DashboardPageProps {
 }
 export const StyledSection: FC<Props> = ({ className, children, sectionRef }) => {
   return (
-    <SectionOuterWrapper className={className ?? ''} ref={sectionRef}>
-      <SectionInnerWrapper>{children}</SectionInnerWrapper>
-    </SectionOuterWrapper>
+    <StyledSectionOuterWrapper className={className ?? ''} ref={sectionRef}>
+      <StyledSectionInnerWrapper>{children}</StyledSectionInnerWrapper>
+    </StyledSectionOuterWrapper>
   );
 };

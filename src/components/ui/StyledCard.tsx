@@ -22,7 +22,7 @@ const StyledCardElementExtra = styled(StyledCardElement)`
     visibility: visible;
   }
 `;
-const CardBody = styled.div`
+const StyledCardBody = styled.div`
   padding: 10px;
 `;
 
@@ -35,7 +35,7 @@ export const StyledCard: FC<Props> = ({ className, hasExtras, children }) => {
   if (hasExtras) FinalStyledCardElement = StyledCardElementExtra;
   return (
     <FinalStyledCardElement className={`border ${className}`}>
-      <CardBody>{children}</CardBody>
+      <StyledCardBody>{children}</StyledCardBody>
     </FinalStyledCardElement>
   );
 };

@@ -3,7 +3,7 @@ import { Facebook, Github, Instagram, Linkedin, Twitter } from 'react-bootstrap-
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Socials = styled.div`
+const StyledSocials = styled.div`
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -43,28 +43,28 @@ interface Props {
   className?: string;
   switchColors: boolean;
 }
-export const SocialLinks: FC<Props> = ({ switchColors, className }) => {
-  const LinkElement = switchColors ? ColorSwitcherStyledLink : StyledLink;
+export const StyledSocialLinks: FC<Props> = ({ switchColors, className }) => {
+  const StyledLinkElement = switchColors ? ColorSwitcherStyledLink : StyledLink;
   return (
-    <Socials className={className ?? ''}>
-      <LinkElement to="https://www.facebook.com/evaldas.laureckas/" target="_blank">
+    <StyledSocials className={className ?? ''}>
+      <StyledLinkElement to="https://www.facebook.com/evaldas.laureckas/" target="_blank">
         <Facebook />
-      </LinkElement>
-      <LinkElement to="https://www.instagram.com/laureckas.evaldas/" target="_blank">
+      </StyledLinkElement>
+      <StyledLinkElement to="https://www.instagram.com/laureckas.evaldas/" target="_blank">
         <Instagram />
-      </LinkElement>
-      <LinkElement to="https://github.com/piratuks/" target="_blank">
+      </StyledLinkElement>
+      <StyledLinkElement to="https://github.com/piratuks/" target="_blank">
         <Github />
-      </LinkElement>
-      <LinkElement to="https://twitter.com/ELaureckas/" target="_blank">
+      </StyledLinkElement>
+      <StyledLinkElement to="https://twitter.com/ELaureckas/" target="_blank">
         <Twitter />
-      </LinkElement>
-      <LinkElement to="https://www.linkedin.com/in/evaldas123456/" target="_blank">
+      </StyledLinkElement>
+      <StyledLinkElement to="https://www.linkedin.com/in/evaldas123456/" target="_blank">
         <Linkedin />
-      </LinkElement>
-      {/* <LinkElement to="https://www.linkedin.com/in/evaldas123456/" target="_blank">
+      </StyledLinkElement>
+      {/* <StyledLinkElement to="https://www.linkedin.com/in/evaldas123456/" target="_blank">
         <Linkedin /> MAil
-      </LinkElement> */}
-    </Socials>
+      </StyledLinkElement> */}
+    </StyledSocials>
   );
 };

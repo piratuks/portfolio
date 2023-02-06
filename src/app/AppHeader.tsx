@@ -5,7 +5,7 @@ import useScrollSpy from 'react-use-scrollspy';
 import styled from 'styled-components';
 import { AppProps } from './App';
 
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
   .navbar.affix {
     box-shadow: 0 6px 15px rgba(206, 212, 218, 0.3);
   }
@@ -22,7 +22,7 @@ const StyledNavbar = styled(Navbar)`
     }
   }
 `;
-const LogoImg = styled.img`
+const StyleLogoImg = styled.img`
   width: 90px;
   -webkit-filter: drop-shadow(1px 2px 25px rgba(206, 212, 218, 0.9));
   filter: drop-shadow(1px 2px 25px rgba(206, 212, 218, 0.9));
@@ -53,11 +53,11 @@ export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
   });
 
   return (
-    <Wrapper>
+    <StyledWrapper>
       <StyledNavbar expand="lg" fixed="top" className={navActiveSection === 0 ? 'affix' : ''}>
         <Container>
           <Navbar.Brand href="#">
-            <LogoImg
+            <StyleLogoImg
               src={logoOrange}
               alt="Evaldas Laureckas Software Development"
               onClick={() => {
@@ -129,6 +129,6 @@ export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
           </Navbar.Collapse>
         </Container>
       </StyledNavbar>
-    </Wrapper>
+    </StyledWrapper>
   );
 };

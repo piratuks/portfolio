@@ -1,8 +1,8 @@
 import { scope } from 'app/constant';
 import { BtnType, StyledButtons } from 'components/ui/StyledButtons';
 import { StyledSection } from 'components/ui/StyledSection';
-import { SubTitle } from 'components/ui/SubTitle';
-import { Title } from 'components/ui/Title';
+import { StyledSubTitle } from 'components/ui/StyledSubTitle';
+import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
 import { Col, Container, ListGroup, Row } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -13,7 +13,6 @@ const StyledListItem = styled(ListGroup.Item)`
   color: #495057;
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
 `;
-
 export const About: FC<DashboardPageProps> = ({ sectionRef }) => {
   return (
     <StyledSection className={'mt-3'} sectionRef={sectionRef}>
@@ -27,8 +26,8 @@ export const About: FC<DashboardPageProps> = ({ sectionRef }) => {
             />
           </Col>
           <Col md={9} className="ps-md-4">
-            <Title isContainer={false}>Evaldas Laureckas</Title>
-            <SubTitle isContainer={false}>Software Developer</SubTitle>
+            <StyledTitle isContainer={false}>Evaldas Laureckas</StyledTitle>
+            <StyledSubTitle isContainer={false}>Software Developer</StyledSubTitle>
             <p>
               Master’s degree within marine engineering and bachelor’s degree from faculty of natural science,
               mathematics computer science department. I am an Innovative software engineer offering over ten years of

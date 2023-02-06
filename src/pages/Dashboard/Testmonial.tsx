@@ -1,7 +1,7 @@
 import { StyledCard } from 'components/ui/StyledCard';
 import { StyledSection } from 'components/ui/StyledSection';
-import { SubTitle } from 'components/ui/SubTitle';
-import { Title } from 'components/ui/Title';
+import { StyledSubTitle } from 'components/ui/StyledSubTitle';
+import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -26,7 +26,7 @@ const StyledCardCustom = styled(StyledCard)`
   margin: 10px auto;
   padding: 20px 15px;
 `;
-const StyledTitle = styled.h1`
+const StyledTitleH1 = styled.h1`
   margin-top: 30px;
   font-size: 20px;
 `;
@@ -35,10 +35,10 @@ export const Testmonial: FC<DashboardPageProps> = ({ sectionRef }) => {
   return (
     <StyledSection sectionRef={sectionRef}>
       <Container className="text-center">
-        <SubTitle isContainer={false}>Testmonial</SubTitle>
-        <Title isContainer={false} className={'mb-4'}>
+        <StyledSubTitle isContainer={false}>Testmonial</StyledSubTitle>
+        <StyledTitle isContainer={false} className={'mb-4'}>
           What People Say About Me
-        </Title>
+        </StyledTitle>
         <p className="mb-5 pb-4">People I&apos;ve worked with have said some nice things...</p>
 
         <StyledCarousel indicators={true}>
@@ -50,8 +50,8 @@ export const Testmonial: FC<DashboardPageProps> = ({ sectionRef }) => {
                 industry-standard interface and a technical mentor for the other front-end developers on our team. His
                 enthusiasm, energy, motivation, speed & quality of delivery are for me his strongest points.
               </p>
-              <StyledTitle>Dirk Vermeiren</StyledTitle>
-              <SubTitle isContainer={false}>Chief Technology Officer at VaultSpeed</SubTitle>
+              <StyledTitleH1>Dirk Vermeiren</StyledTitleH1>
+              <StyledSubTitle isContainer={false}>Chief Technology Officer at VaultSpeed</StyledSubTitle>
             </StyledCardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -73,8 +73,8 @@ export const Testmonial: FC<DashboardPageProps> = ({ sectionRef }) => {
                 teachings you been sharing with us and all the nice moments spend together - I&apos;ve no doubt that
                 from you only one outcome is possible, the success! Best wishes!
               </p>
-              <StyledTitle>Nuno Santos</StyledTitle>
-              <SubTitle isContainer={false}>VaultSpeed Development Team Manager</SubTitle>
+              <StyledTitleH1>Nuno Santos</StyledTitleH1>
+              <StyledSubTitle isContainer={false}>VaultSpeed Development Team Manager</StyledSubTitle>
             </StyledCardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -87,8 +87,8 @@ export const Testmonial: FC<DashboardPageProps> = ({ sectionRef }) => {
                 strategic visions. His work is always top-notch, and he is always welcoming to feedback and making
                 improvements. Plus, Evaldas is self-motivated and a great team player.
               </p>
-              <StyledTitle>Ravi Sejling</StyledTitle>
-              <SubTitle isContainer={false}>Product Owner at Danske Bank</SubTitle>
+              <StyledTitleH1>Ravi Sejling</StyledTitleH1>
+              <StyledSubTitle isContainer={false}>Product Owner at Danske Bank</StyledSubTitle>
             </StyledCardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -98,8 +98,10 @@ export const Testmonial: FC<DashboardPageProps> = ({ sectionRef }) => {
                 player, at the same time Evaldas is able to analyze, understand problems and make solution suggestions.
                 Excellent communication with other developers within the project!
               </p>
-              <StyledTitle>Žilvinas Grigonis</StyledTitle>
-              <SubTitle isContainer={false}>Head of Software Engineering | Innovation and Simplicity</SubTitle>
+              <StyledTitleH1>Žilvinas Grigonis</StyledTitleH1>
+              <StyledSubTitle isContainer={false}>
+                Head of Software Engineering | Innovation and Simplicity
+              </StyledSubTitle>
             </StyledCardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -108,8 +110,8 @@ export const Testmonial: FC<DashboardPageProps> = ({ sectionRef }) => {
                 Evaldas is a hardworking and diligent developer. Always keen to take feedback, take on new challenges
                 and work with the team to achieve best results for everyone. Its a pleasure to with with Evaldas.
               </p>
-              <StyledTitle>Animesh Chowdhury</StyledTitle>
-              <SubTitle isContainer={false}>Tech entrepreneur, Seed Investor</SubTitle>
+              <StyledTitleH1>Animesh Chowdhury</StyledTitleH1>
+              <StyledSubTitle isContainer={false}>Tech entrepreneur, Seed Investor</StyledSubTitle>
             </StyledCardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -121,8 +123,8 @@ export const Testmonial: FC<DashboardPageProps> = ({ sectionRef }) => {
                 solutions to problems we posed. We would have no second thoughts about employing Evaldas for future work
                 with our company.
               </p>
-              <StyledTitle>Lindsay Adam</StyledTitle>
-              <SubTitle isContainer={false}>Owner, PCByVoice</SubTitle>
+              <StyledTitleH1>Lindsay Adam</StyledTitleH1>
+              <StyledSubTitle isContainer={false}>Owner, PCByVoice</StyledSubTitle>
             </StyledCardCustom>
           </Carousel.Item>
         </StyledCarousel>

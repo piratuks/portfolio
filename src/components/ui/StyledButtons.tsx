@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
   .btn.w-sm {
     min-width: 100px;
   }
@@ -100,7 +100,7 @@ interface Props {
 }
 export const StyledButtons: FC<Props> = ({ className, buttons }) => {
   return (
-    <Wrapper className={className ?? ''}>
+    <StyledWrapper className={className ?? ''}>
       {buttons.map((button, index) => {
         if (button.type === BtnType.dark)
           return (
@@ -127,6 +127,6 @@ export const StyledButtons: FC<Props> = ({ className, buttons }) => {
             </StyledPrimaryButton>
           );
       })}
-    </Wrapper>
+    </StyledWrapper>
   );
 };

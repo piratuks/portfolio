@@ -1,8 +1,8 @@
 import avatar from 'assets/avatar.svg';
-import { SocialLinks } from 'components/ui/SocialLinks';
 import { BtnType, StyledButtons } from 'components/ui/StyledButtons';
-import { SubTitle } from 'components/ui/SubTitle';
-import { Title } from 'components/ui/Title';
+import { StyledSocialLinks } from 'components/ui/StyledSocialLinks';
+import { StyledSubTitle } from 'components/ui/StyledSubTitle';
+import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
 import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -59,7 +59,7 @@ const ImgWrapper = styled.div`
     display: none;
   }
 `;
-const AvatarImg = styled.img`
+const StyledAvatarImg = styled.img`
   width: 100%;
   max-width: 620px;
   -webkit-filter: drop-shadow(0 -4px 20px rgba(206, 212, 218, 0.4));
@@ -133,8 +133,8 @@ export const Header: FC<Props> = ({ sectionRef, contactsRef }) => {
     <HeaderWrapper ref={sectionRef}>
       <StyledContainer>
         <InfoWrapper>
-          <SubTitle isContainer={true}>hello, I&apos;m</SubTitle>
-          <Title isContainer={true}>Evaldas Laureckas</Title>
+          <StyledSubTitle isContainer={true}>hello, I&apos;m</StyledSubTitle>
+          <StyledTitle isContainer={true}>Evaldas Laureckas</StyledTitle>
           <p>Software Developer</p>
 
           <StyledButtons
@@ -153,10 +153,10 @@ export const Header: FC<Props> = ({ sectionRef, contactsRef }) => {
             ]}
           />
 
-          <SocialLinks switchColors={false} className={'mt-4'} />
+          <StyledSocialLinks switchColors={false} className={'mt-4'} />
         </InfoWrapper>
         <ImgWrapper>
-          <AvatarImg src={avatar} alt="Evaldas Laureckas" />
+          <StyledAvatarImg src={avatar} alt="Evaldas Laureckas" />
         </ImgWrapper>
       </StyledContainer>
 

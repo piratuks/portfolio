@@ -1,7 +1,7 @@
 import { StyledCard } from 'components/ui/StyledCard';
 import { StyledSection } from 'components/ui/StyledSection';
-import { SubTitle } from 'components/ui/SubTitle';
-import { Title } from 'components/ui/Title';
+import { StyledSubTitle } from 'components/ui/StyledSubTitle';
+import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
 import { Container } from 'react-bootstrap';
 import { AiFillHtml5 } from 'react-icons/ai';
@@ -74,14 +74,14 @@ export const Skills: FC = () => {
   return (
     <StyledSection>
       <Container className="text-center">
-        <SubTitle isContainer={false}>Skills</SubTitle>
-        <Title isContainer={false} className={'mb-4'}>
+        <StyledSubTitle isContainer={false}>Skills</StyledSubTitle>
+        <StyledTitle isContainer={false} className={'mb-4'}>
           Why Choose me
-        </Title>
+        </StyledTitle>
         <StyledCard hasExtras={false} className={'mb-4'}>
-          <SubTitle isContainer={false}>
+          <StyledSubTitle isContainer={false}>
             These are, but not limited to, the tech I use for building client-side applications
-          </SubTitle>
+          </StyledSubTitle>
           <SkillWrapper>
             <StyledLink to="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
               <AiFillHtml5 />
@@ -137,9 +137,9 @@ export const Skills: FC = () => {
           </SkillWrapper>
         </StyledCard>
         <StyledCard hasExtras={false} className={'mb-4'}>
-          <SubTitle isContainer={false}>
+          <StyledSubTitle isContainer={false}>
             These are, but not limited to, the tech I use for building fast and scalable backend applications
-          </SubTitle>
+          </StyledSubTitle>
           <SkillWrapper>
             <StyledLink to="https://nodejs.org/en/" target="_blank">
               <IoLogoNodejs />
@@ -186,7 +186,7 @@ export const Skills: FC = () => {
           </SkillWrapper>
         </StyledCard>
         <StyledCard hasExtras={false} className={'mb-4'}>
-          <SubTitle isContainer={false}>Others...and more!</SubTitle>
+          <StyledSubTitle isContainer={false}>Others...and more!</StyledSubTitle>
           <SkillWrapper>
             <StyledLink to="https://www.selenium.dev/" target="_blank">
               <SiSelenium />
