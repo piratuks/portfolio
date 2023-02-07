@@ -146,7 +146,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
-                  <StyledSubTitle isContainer={false}>Teh Trainee Programmer / Tester</StyledSubTitle>
+                  <StyledSubTitle isContainer={false}>The Trainee Programmer / Tester</StyledSubTitle>
                   <Badge bg="secondary" pill>
                     Jun 2012 - Aug 2012
                   </Badge>
