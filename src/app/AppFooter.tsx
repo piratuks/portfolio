@@ -57,7 +57,7 @@ export const AppFooter: FC<SectionWithContactsProps> = ({ sectionRef, contactsRe
       <StyledHireMeContainerElement>
         <StyledHireMeBoxElement>
           <Row className="justify-content-center align-items-center">
-            <Col sm={6} md={3}>
+            <Col sm={6} md={3} className="text-center">
               <StyledTitleCustomizedElement isContainer={false}>Start a projects</StyledTitleCustomizedElement>
             </Col>
             <Col sm={6} md={4}>
@@ -65,7 +65,7 @@ export const AppFooter: FC<SectionWithContactsProps> = ({ sectionRef, contactsRe
                 Interested in working together? We should queue up a time to chat.
               </SubTitle>
             </Col>
-            <Col sm={6} md={3}>
+            <Col sm={6} md={3} className="text-center">
               <Buttons
                 className={'pt-3'}
                 buttons={[

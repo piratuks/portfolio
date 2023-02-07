@@ -129,19 +129,19 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
           <StyledFormBlockElement>
             <Form onSubmit={handleSubmit}>
               <StyledFormGroupElement className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="email" placeholder="Enter email" size="lg" />
+                <Form.Control type="email" placeholder="Enter email" size="lg" required />
               </StyledFormGroupElement>
               <StyledFormGroupElement className="mb-3" controlId="formBasicName">
-                <Form.Control type="text" placeholder="Name" size="lg" />
+                <Form.Control type="text" placeholder="Name" size="lg" required />
               </StyledFormGroupElement>
               <StyledFormGroupElement className="mb-3" controlId="formBasicMessage">
-                <Form.Control as="textarea" rows={5} type="text" placeholder="Message" size="lg" />
+                <Form.Control as="textarea" rows={5} type="text" placeholder="Message" size="lg" required />
               </StyledFormGroupElement>
               <Buttons
                 buttons={[
                   {
                     className: 'w-lg btn-block',
-                    handleClick: () => () => console.log,
+                    handleClick: () => () => {},
                     type: BtnType.primary,
                     caption: 'Send Message',
                     isSubmit: true

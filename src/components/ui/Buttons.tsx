@@ -76,6 +76,7 @@ interface Props {
     type: BtnType;
     caption: string;
     isSubmit?: boolean;
+    isDisabled?: () => boolean;
   }>;
 }
 export const Buttons: FC<Props> = ({ className, buttons }) => {
@@ -89,6 +90,7 @@ export const Buttons: FC<Props> = ({ className, buttons }) => {
             size="lg"
             onClick={button.isSubmit ? () => {} : button.handleClick()}
             key={index}
+            disabled={button.isDisabled ? button.isDisabled() : false}
             type={button.isSubmit ? 'submit' : 'button'}
           >
             {button.caption}
