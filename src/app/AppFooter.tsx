@@ -12,7 +12,7 @@ import styled from 'styled-components';
 
 const StyledFooterWrapperElement = styled.footer`
   background: var(--bs-primary);
-  min-height: 550px;
+  min-height: 650px;
   padding-top: 10rem;
   @media (max-width: 767.98px) {
     .page-footer {
@@ -21,7 +21,7 @@ const StyledFooterWrapperElement = styled.footer`
   }
 `;
 const StyledLogoElement = styled(LogoImgElement)`
-  width: 300px;
+  width: 400px;
 `;
 const StyledTitleH1Element = styled.h1`
   color: var(--bs-white);
