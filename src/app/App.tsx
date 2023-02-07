@@ -2,11 +2,11 @@ import { AlertContainer } from 'components/notifications/Alert/AlertContainer';
 import { Loader } from 'components/ui/Loader';
 import { FC, useEffect, useRef } from 'react';
 import { Container } from 'react-bootstrap';
-import { apiError } from 'state/alertHelper';
+import { AlertCode, apiErrorToast } from 'state/alertHelper';
 import { useFetchConfigurationQuery } from 'state/configurationApi';
 import { configurationLoaded, selectIsconfigurationInitialized } from 'state/configurationSlice';
 import { useAppDispatch, useAppSelector } from 'state/configureStore';
-import { ErrorCode } from 'state/errorCode';
+
 import { AppFooter } from './AppFooter';
 import { AppHeader } from './AppHeader';
 import { AppRoutes } from './AppRoutes';
@@ -27,7 +27,7 @@ export const App: FC = () => {
     if (data) dispatch(configurationLoaded(data));
   }, [data]);
 
-  if (error) apiError({ error, id: ErrorCode.configError });
+  if (error) apiErrorToast({ error, id: AlertCode.configError, dispatcher: dispatch });
   if (!error && (isFetching || !isInitialized)) return <Loader />;
 
   return (

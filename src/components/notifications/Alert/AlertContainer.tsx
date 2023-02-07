@@ -12,6 +12,7 @@ export const AlertContainer: FC = () => {
       {alerts.map(alert => {
         return (
           <Alert
+            type={alert.type}
             key={alert.id}
             autohide={alert.autohide}
             isOpen={alert.isOpen}

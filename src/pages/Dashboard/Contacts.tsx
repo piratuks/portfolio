@@ -1,12 +1,16 @@
+import emailjs from '@emailjs/browser';
 import { PageProps } from 'app/App';
 import { BtnType, Buttons } from 'components/ui/Buttons';
+import { Loader } from 'components/ui/Loader';
 import { Section } from 'components/ui/Section';
 import { SubTitle } from 'components/ui/SubTitle';
 import { Title } from 'components/ui/Title';
-import { FC } from 'react';
+import { FC, useRef, useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import { SlLocationPin } from 'react-icons/sl';
 import { TfiEmail } from 'react-icons/tfi';
+import { AlertCode, apiErrorToast, successToast } from 'state/alertHelper';
+import { useAppDispatch } from 'state/configureStore';
 import styled from 'styled-components';
 
 const StyledContactBlockEElement = styled.div`
@@ -111,9 +115,43 @@ const StyledFormGroupElement = styled(Form.Group)`
 `;
 
 export const Contacts: FC<PageProps> = ({ sectionRef }) => {
+  const form = useRef(null);
+  const dispatch = useAppDispatch();
+  const [isLoading, setLoading] = useState(false);
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    console.log(event.target.formBasicEmail.value);
+
+    if (
+      form.current &&
+      process.env.REACT_APP_EMAIL_PUBLIC_ID &&
+      process.env.REACT_APP_EMAIL_TEMPLATE_ID &&
+      process.env.REACT_APP_EMAIL_SERVICE_ID
+    ) {
+      setLoading(true);
+      emailjs
+        .send(
+          process.env.REACT_APP_EMAIL_SERVICE_ID,
+          process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+          {
+            user_name: event.target.user_name.value,
+            message: event.target.message.value,
+            user_email: event.target.user_email.value
+          },
+          process.env.REACT_APP_EMAIL_PUBLIC_ID
+        )
+        .then(
+          result => {
+            setLoading(false);
+            successToast({ message: result.text, id: AlertCode.successEmail, dispatcher: dispatch });
+          },
+          error => {
+            setLoading(false);
+            apiErrorToast({ error, message: error.text, id: AlertCode.failedSentEmail, dispatcher: dispatch });
+          }
+        );
+    }
+
+    event.target.reset();
   };
 
   return (
@@ -127,27 +165,38 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
 
         <StyledContactBlockEElement className="text-start">
           <StyledFormBlockElement>
-            <Form onSubmit={handleSubmit}>
-              <StyledFormGroupElement className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="email" placeholder="Enter email" size="lg" required />
+            <Form onSubmit={handleSubmit} ref={form}>
+              <StyledFormGroupElement className="mb-3" controlId="user_email">
+                <Form.Control type="email" placeholder="Enter email" size="lg" required name="user_email" />
               </StyledFormGroupElement>
-              <StyledFormGroupElement className="mb-3" controlId="formBasicName">
-                <Form.Control type="text" placeholder="Name" size="lg" required />
+              <StyledFormGroupElement className="mb-3" controlId="user_name">
+                <Form.Control type="text" placeholder="Name" size="lg" required name="user_name" />
               </StyledFormGroupElement>
-              <StyledFormGroupElement className="mb-3" controlId="formBasicMessage">
-                <Form.Control as="textarea" rows={5} type="text" placeholder="Message" size="lg" required />
+              <StyledFormGroupElement className="mb-3" controlId="message">
+                <Form.Control
+                  as="textarea"
+                  rows={5}
+                  type="text"
+                  placeholder="Message"
+                  size="lg"
+                  required
+                  name="message"
+                />
               </StyledFormGroupElement>
-              <Buttons
-                buttons={[
-                  {
-                    className: 'w-lg btn-block',
-                    handleClick: () => () => {},
-                    type: BtnType.primary,
-                    caption: 'Send Message',
-                    isSubmit: true
-                  }
-                ]}
-              />
+              {isLoading && <Loader />}
+              {!isLoading && (
+                <Buttons
+                  buttons={[
+                    {
+                      className: 'w-lg btn-block',
+                      handleClick: () => () => {},
+                      type: BtnType.primary,
+                      caption: 'Send Message',
+                      isSubmit: true
+                    }
+                  ]}
+                />
+              )}
             </Form>
           </StyledFormBlockElement>
           <StyledContactsBlockElement>

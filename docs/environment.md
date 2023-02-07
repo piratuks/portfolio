@@ -21,7 +21,16 @@
 - themes with [Bootswatch](https://bootswatch.com/)
   - however for each new theme it is required to have new logo based on that theme
   - defaultTheme under constant is the name which check for logo img color
+- email service [Emailjs](https://www.emailjs.com/)
 
 #env
 
+`.env.development`
+
 - REACT_APP_ENABLE_MOCKS = {true, false} - enables or disables mocks
+
+both `.env.development` && `.env.production`
+
+- REACT_APP_EMAIL_SERVICE_ID = {string} - Emailjs service id
+- REACT_APP_EMAIL_TEMPLATE_ID = {string} - Emailjs template id
+- REACT_APP_EMAIL_PUBLIC_ID = {string} - Emailjs public id

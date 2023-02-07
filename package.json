@@ -6,6 +6,7 @@
   "description": "Portfolio webpage",
   "homepage": "https://piratuks.github.io/portfolio",
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^13.5.0",
