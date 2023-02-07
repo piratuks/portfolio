@@ -1,10 +1,17 @@
+import logoDarkPurple from 'assets/logo-dark-purple.svg';
+import logoMint from 'assets/logo-mint.svg';
 import logoOrange from 'assets/logo-orange.svg';
+import logoPurple from 'assets/logo-purple.svg';
+import logoSolar from 'assets/logo-solar.svg';
+
 import { LogoImgElement } from 'components/ui/Logo';
 import { FC } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import useScrollSpy from 'react-use-scrollspy';
 import styled from 'styled-components';
 import { AppProps } from './App';
+import { defaultTheme } from './constant';
+import { Theme } from './theme';
 
 const StyledWrapperElement = styled.div`
   .navbar.affix {
@@ -51,13 +58,41 @@ export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
     activeSectionDefault: -1
   });
 
+  let logoImg = logoOrange;
+  switch (defaultTheme) {
+    case Theme.orange: {
+      logoImg = logoOrange;
+      break;
+    }
+    case Theme.mint: {
+      logoImg = logoMint;
+      break;
+    }
+    case Theme.purple: {
+      logoImg = logoPurple;
+      break;
+    }
+    case Theme.darkPurple: {
+      logoImg = logoDarkPurple;
+      break;
+    }
+    case Theme.solar: {
+      logoImg = logoSolar;
+      break;
+    }
+    default: {
+      logoImg = logoOrange;
+      break;
+    }
+  }
+
   return (
     <StyledWrapperElement>
       <StyledNavbarElement expand="lg" fixed="top" className={navActiveSection === 0 ? 'affix' : ''}>
         <Container>
           <Navbar.Brand href="#">
             <StyledLogoElement
-              src={logoOrange}
+              src={logoImg}
               alt="Evaldas Laureckas Software Development"
               onClick={() => {
                 sectionRefs[0].current?.scrollIntoView();

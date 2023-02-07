@@ -18,6 +18,9 @@
   - https://www.free-css.com/free-css-templates/page287/steller
   - https://themewagon.github.io/meyawo/?_ga=2.212626320.58477936.1675616620-486613431.1675438019
 - using scroll spy [Spy](https://www.npmjs.com/package/react-use-scrollspy)
+- themes with [Bootswatch](https://bootswatch.com/)
+  - however for each new theme it is required to have new logo based on that theme
+  - defaultTheme under constant is the name which check for logo img color
 
 #env
 
