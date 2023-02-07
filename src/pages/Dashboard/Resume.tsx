@@ -7,8 +7,8 @@ import { FC } from 'react';
 import { Badge, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
-const CardTitle = styled(Title)`
-  color: #ff7a57;
+const CardTitleElement = styled(Title)`
+  color: var(--bs-primary);
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
 `;
@@ -24,12 +24,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
         <Row>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>Chevron Corporation</CardTitle>
+              <CardTitleElement isContainer={false}>Chevron Corporation</CardTitleElement>
               <SubTitle isContainer={false}>Remote, Contract</SubTitle>
               <Badge bg="primary" pill>
                 Current
               </Badge>
-
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
                   <SubTitle isContainer={false}>Application Engineer</SubTitle>
@@ -42,12 +41,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           </Col>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>Danske Bank</CardTitle>
+              <CardTitleElement isContainer={false}>Danske Bank</CardTitleElement>
               <SubTitle isContainer={false}>Remote, Contract, 2 year 1 months</SubTitle>
               {/* <Badge bg="primary" pill>
                 Current
               </Badge> */}
-
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
                   <SubTitle isContainer={false}>Senior Frontend Developer</SubTitle>
@@ -60,7 +58,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           </Col>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>VaultSpeed</CardTitle>
+              <CardTitleElement isContainer={false}>VaultSpeed</CardTitleElement>
               <SubTitle isContainer={false}>Remote, Contract, 2 years 4 months</SubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -80,7 +78,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           </Col>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>Elsis Pro</CardTitle>
+              <CardTitleElement isContainer={false}>Elsis Pro</CardTitleElement>
               <SubTitle isContainer={false}>Remote, Contract, 9 months</SubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -94,7 +92,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           </Col>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>The Good Till Co</CardTitle>
+              <CardTitleElement isContainer={false}>The Good Till Co</CardTitleElement>
               <SubTitle isContainer={false}>Remote, Contract, 1 year 2 months</SubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -108,7 +106,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           </Col>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>PCByVoice LTD</CardTitle>
+              <CardTitleElement isContainer={false}>PCByVoice LTD</CardTitleElement>
               <SubTitle isContainer={false}>Remote, Contract, 7 months</SubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -122,7 +120,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           </Col>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>STMCB Limited t/a Inspiratia</CardTitle>
+              <CardTitleElement isContainer={false}>STMCB Limited t/a Inspiratia</CardTitleElement>
               <SubTitle isContainer={false}>Remote, Contract, 6 months</SubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -136,7 +134,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           </Col>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>UAB Omega Technology</CardTitle>
+              <CardTitleElement isContainer={false}>UAB Omega Technology</CardTitleElement>
               <SubTitle isContainer={false}>Employment, Onsite, 5 years 7 months</SubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -156,7 +154,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           </Col>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>LaunchMen</CardTitle>
+              <CardTitleElement isContainer={false}>LaunchMen</CardTitleElement>
               <SubTitle isContainer={false}>Remote, Contract, 2 months</SubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -170,7 +168,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           </Col>
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
-              <CardTitle isContainer={false}>VŠĮ Technology and Business School</CardTitle>
+              <CardTitleElement isContainer={false}>VŠĮ Technology and Business School</CardTitleElement>
               <SubTitle isContainer={false}>Employment, Onsite, 1 months</SubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">

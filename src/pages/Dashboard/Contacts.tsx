@@ -9,11 +9,11 @@ import { SlLocationPin } from 'react-icons/sl';
 import { TfiEmail } from 'react-icons/tfi';
 import styled from 'styled-components';
 
-const StyledContactBlock = styled.div`
+const StyledContactBlockEElement = styled.div`
   position: relative;
   border-radius: 0.3rem;
   border: 1px solid 1px;
-  box-shadow: 1px 2px 6px rgba(173, 181, 189, 0.5);
+  box-shadow: 1px 2px 6px rgba(var(--bs-dark-rgb), 0.3);
   padding: 0 25px 0 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,7 +22,7 @@ const StyledContactBlock = styled.div`
   max-width: 1000px;
   margin: 0 auto 150px;
   z-index: 99;
-  background: #fff;
+  background: var(--bs-white);
 
   @media (max-width: 991.98px) {
     -webkit-box-orient: vertical;
@@ -33,12 +33,12 @@ const StyledContactBlock = styled.div`
     padding: 20px;
   }
 `;
-const StyledFormBlock = styled.div`
+const StyledFormBlockElement = styled.div`
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  border-right: 1px solid #dee2e6;
+  border-right: 1px solid var(--bs-gray-300);
   padding: 25px 25px 25px 0;
 
   @media (max-width: 991.98px) {
@@ -47,7 +47,7 @@ const StyledFormBlock = styled.div`
     border-right: 0;
   }
 `;
-const StyledContactsBlock = styled.div`
+const StyledContactsBlockElement = styled.div`
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -58,7 +58,7 @@ const StyledContactsBlock = styled.div`
     display: none;
   }
 `;
-const StyledContactsItem = styled.div`
+const StyledContactsItemElement = styled.div`
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -67,49 +67,46 @@ const StyledContactsItem = styled.div`
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 `;
-const StyledContactsItemInfo = styled.div`
-  border-bottom: 1px solid #dee2e6;
+const StyledContactsItemInfoElement = styled.div`
+  border-bottom: 1px solid var(--bs-gray-300);
   margin-bottom: 25px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 `;
-const StyledH5 = styled.h5`
+const StyledH5Element = styled.h5`
   margin-bottom: 10px;
   opacity: 0.9;
 `;
-const StyledParagraph = styled.p`
+const StyledParagraphElement = styled.p`
   opacity: 0.7;
   font-size: 15px;
   margin-bottom: 4px;
 `;
-const StyledIcons = styled.div`
+const StyledIconsElement = styled.div`
   display: block;
   width: 40px;
   font-size: 16px;
-  color: primary;
+  color: var(--bs-primary);
   width: 37px;
   height: 37px;
   border-radius: 50%;
-  border: 1px solid #ff7a57;
+  border: 1px solid var(--bs-primary);
   line-height: 34px;
   text-align: center;
   padding: 0 !important;
-  color: #ff7a57;
+  color: var(--bs-primary);
   margin-right: 15px;
 `;
-const StyledFormGroup = styled(Form.Group)`
+const StyledFormGroupElement = styled(Form.Group)`
   .form-control {
-    color: #495057;
+    color: var(--bs-gray-700);
     font-size: 1rem;
   }
   .form-control:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #ffdfd7;
+    color: var(--bs-gray-700);
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(255, 122, 87, 0.25);
   }
 `;
 
@@ -128,18 +125,18 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
         </Title>
         <p className="mb-5 pb-4">Thanks for taking the time to reach out. How can I help you today?</p>
 
-        <StyledContactBlock className="text-start">
-          <StyledFormBlock>
+        <StyledContactBlockEElement className="text-start">
+          <StyledFormBlockElement>
             <Form onSubmit={handleSubmit}>
-              <StyledFormGroup className="mb-3" controlId="formBasicEmail">
+              <StyledFormGroupElement className="mb-3" controlId="formBasicEmail">
                 <Form.Control type="email" placeholder="Enter email" size="lg" />
-              </StyledFormGroup>
-              <StyledFormGroup className="mb-3" controlId="formBasicName">
+              </StyledFormGroupElement>
+              <StyledFormGroupElement className="mb-3" controlId="formBasicName">
                 <Form.Control type="text" placeholder="Name" size="lg" />
-              </StyledFormGroup>
-              <StyledFormGroup className="mb-3" controlId="formBasicMessage">
+              </StyledFormGroupElement>
+              <StyledFormGroupElement className="mb-3" controlId="formBasicMessage">
                 <Form.Control as="textarea" rows={5} type="text" placeholder="Message" size="lg" />
-              </StyledFormGroup>
+              </StyledFormGroupElement>
               <Buttons
                 buttons={[
                   {
@@ -152,28 +149,28 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
                 ]}
               />
             </Form>
-          </StyledFormBlock>
-          <StyledContactsBlock>
-            <StyledContactsItem>
-              <StyledIcons>
+          </StyledFormBlockElement>
+          <StyledContactsBlockElement>
+            <StyledContactsItemElement>
+              <StyledIconsElement>
                 <SlLocationPin />
-              </StyledIcons>
-              <StyledContactsItemInfo>
-                <StyledH5>Location</StyledH5>
-                <StyledParagraph>Klaipėda, Lithuania</StyledParagraph>
-              </StyledContactsItemInfo>
-            </StyledContactsItem>
-            <StyledContactsItem>
-              <StyledIcons>
+              </StyledIconsElement>
+              <StyledContactsItemInfoElement>
+                <StyledH5Element>Location</StyledH5Element>
+                <StyledParagraphElement>Klaipėda, Lithuania</StyledParagraphElement>
+              </StyledContactsItemInfoElement>
+            </StyledContactsItemElement>
+            <StyledContactsItemElement>
+              <StyledIconsElement>
                 <TfiEmail />
-              </StyledIcons>
-              <StyledContactsItemInfo>
-                <StyledH5>Email Address</StyledH5>
-                <StyledParagraph>evaldas.laureckas@gmail.com</StyledParagraph>
-              </StyledContactsItemInfo>
-            </StyledContactsItem>
-          </StyledContactsBlock>
-        </StyledContactBlock>
+              </StyledIconsElement>
+              <StyledContactsItemInfoElement>
+                <StyledH5Element>Email Address</StyledH5Element>
+                <StyledParagraphElement>evaldas.laureckas@gmail.com</StyledParagraphElement>
+              </StyledContactsItemInfoElement>
+            </StyledContactsItemElement>
+          </StyledContactsBlockElement>
+        </StyledContactBlockEElement>
       </Container>
     </Section>
   );

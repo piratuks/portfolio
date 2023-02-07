@@ -11,10 +11,10 @@ import { FC } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
-const CardTitle = styled(Title)`
-  color: #ff7a57;
+const CardTitleElement = styled(Title)`
+  color: var(--bs-primary);
 `;
-const CardSubTitle = styled.div`
+const CardSubTitleElements = styled.div`
   font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1300 - 300)));
   position: absolute;
   bottom: -100%;
@@ -43,40 +43,40 @@ export const Services: FC<PageProps> = ({ sectionRef }) => {
           <Col sm={6} md={3} className="mb-4">
             <Card hasExtras={true}>
               <ServiceImg src={frontend} alt="Frontend development" />
-              <CardTitle isContainer={false}>Frontend</CardTitle>
-              <CardSubTitle className="subtitle">
+              <CardTitleElement isContainer={false}>Frontend</CardTitleElement>
+              <CardSubTitleElements className="subtitle">
                 I am capable to develop solutions with any modern frontend framework. Most knowledge i have with
                 Angular, Vue, Knockout, React.
-              </CardSubTitle>
+              </CardSubTitleElements>
             </Card>
           </Col>
           <Col sm={6} md={3} className="mb-4">
             <Card hasExtras={true}>
               <ServiceImg src={backend} alt="Backend development" />
-              <CardTitle isContainer={false}>Backend</CardTitle>
-              <CardSubTitle className="subtitle">
+              <CardTitleElement isContainer={false}>Backend</CardTitleElement>
+              <CardSubTitleElements className="subtitle">
                 I am capable to develop BE solutions with Microsoft stack, PHP or Node. However i am not limiting myself
                 to only these technologies.
-              </CardSubTitle>
+              </CardSubTitleElements>
             </Card>
           </Col>
           <Col sm={6} md={3} className="mb-4">
             <Card hasExtras={true}>
               <ServiceImg src={fullstack} alt="Fullstack development" />
-              <CardTitle isContainer={false}>Fullstack</CardTitle>
-              <CardSubTitle className="subtitle">
+              <CardTitleElement isContainer={false}>Fullstack</CardTitleElement>
+              <CardSubTitleElements className="subtitle">
                 My whole career i worked on both sides BE and FE. Therefore i am not limited to only FE or BE. I could
                 tackle both sides.
-              </CardSubTitle>
+              </CardSubTitleElements>
             </Card>
           </Col>
           <Col sm={6} md={3} className="mb-4">
             <Card hasExtras={true}>
               <ServiceImg src={mobile} alt="Mobile development" />
-              <CardTitle isContainer={false}>Mobile</CardTitle>
-              <CardSubTitle className="subtitle">
+              <CardTitleElement isContainer={false}>Mobile</CardTitleElement>
+              <CardSubTitleElements className="subtitle">
                 I worked on multiple mobile applications durring my career. Most knowleged i have with Ionic, Xamarin.
-              </CardSubTitle>
+              </CardSubTitleElements>
             </Card>
           </Col>
         </Row>

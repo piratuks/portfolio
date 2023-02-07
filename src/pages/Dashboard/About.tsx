@@ -1,5 +1,5 @@
 import { PageProps } from 'app/App';
-import { scope } from 'app/constant';
+import photo from 'assets/photo.jpg';
 import { BtnType, Buttons } from 'components/ui/Buttons';
 import { Section } from 'components/ui/Section';
 import { SubTitle } from 'components/ui/SubTitle';
@@ -9,8 +9,8 @@ import { Col, Container, ListGroup, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 import { fileDownload } from 'utils/functionUtils';
 
-const StyledListItem = styled(ListGroup.Item)`
-  color: #495057;
+const StyledListItemElement = styled(ListGroup.Item)`
+  color: var(--bs-gray-700);
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
 `;
 export const About: FC<PageProps> = ({ sectionRef }) => {
@@ -19,11 +19,7 @@ export const About: FC<PageProps> = ({ sectionRef }) => {
       <Container className="mt-5">
         <Row className="text-center text-md-start">
           <Col md={3}>
-            <img
-              className="img-thumbnail mb-4"
-              src={`${scope}/photo.jpg`}
-              alt="Evaldas Laureckas Software Development"
-            />
+            <img className="img-thumbnail mb-4" src={photo} alt="Evaldas Laureckas Software Development" />
           </Col>
           <Col md={9} className="ps-md-4">
             <Title isContainer={false}>Evaldas Laureckas</Title>
@@ -38,18 +34,20 @@ export const About: FC<PageProps> = ({ sectionRef }) => {
             </p>
 
             <ListGroup variant="flush">
-              <StyledListItem>Analyzing end user needs and then developing software to meet their needs</StyledListItem>
-              <StyledListItem>Developing features across multiple applications</StyledListItem>
-              <StyledListItem>Reviewing code for quality and adherence to standards</StyledListItem>
-              <StyledListItem>Respond promptly to reports of bugs</StyledListItem>
-              <StyledListItem>Service level reporting</StyledListItem>
-              <StyledListItem>Clearly communicating technical concepts</StyledListItem>
-              <StyledListItem>Maintaining proper software configuration management</StyledListItem>
-              <StyledListItem>Ensuring proper source code documentation</StyledListItem>
-              <StyledListItem>Continuous deployment</StyledListItem>
-              <StyledListItem>Have experience in fully remote jobs/positions</StyledListItem>
-              <StyledListItem>Experience in leading the team</StyledListItem>
-              <StyledListItem>Experience in teams within Enterprise / Start-up setup</StyledListItem>
+              <StyledListItemElement>
+                Analyzing end user needs and then developing software to meet their needs
+              </StyledListItemElement>
+              <StyledListItemElement>Developing features across multiple applications</StyledListItemElement>
+              <StyledListItemElement>Reviewing code for quality and adherence to standards</StyledListItemElement>
+              <StyledListItemElement>Respond promptly to reports of bugs</StyledListItemElement>
+              <StyledListItemElement>Service level reporting</StyledListItemElement>
+              <StyledListItemElement>Clearly communicating technical concepts</StyledListItemElement>
+              <StyledListItemElement>Maintaining proper software configuration management</StyledListItemElement>
+              <StyledListItemElement>Ensuring proper source code documentation</StyledListItemElement>
+              <StyledListItemElement>Continuous deployment</StyledListItemElement>
+              <StyledListItemElement>Have experience in fully remote jobs/positions</StyledListItemElement>
+              <StyledListItemElement>Experience in leading the team</StyledListItemElement>
+              <StyledListItemElement>Experience in teams within Enterprise / Start-up setup</StyledListItemElement>
             </ListGroup>
 
             <Buttons

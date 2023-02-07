@@ -9,13 +9,13 @@ import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import { fileDownload } from 'utils/functionUtils';
 
-const HeaderWrapper = styled.header`
-  color: #495057;
+const HeaderWrapperElement = styled.header`
+  color: var(--bs-gray-700);
   height: 94vh;
   min-height: 650px;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--bs-gray-300);
 `;
-const StyledContainer = styled(Container)`
+const StyledContainerElement = styled(Container)`
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,7 +37,7 @@ const StyledContainer = styled(Container)`
     justify-content: center;
   }
 `;
-const ImgWrapper = styled.div`
+const ImgWrapperElement = styled.div`
   height: 100%;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
@@ -59,21 +59,21 @@ const ImgWrapper = styled.div`
     display: none;
   }
 `;
-const StyledAvatarImg = styled.img`
+const StyledAvatarImgElement = styled.img`
   width: 100%;
   max-width: 620px;
-  -webkit-filter: drop-shadow(0 -4px 20px rgba(206, 212, 218, 0.4));
-  filter: drop-shadow(0 -4px 20px rgba(206, 212, 218, 0.4));
+  -webkit-filter: drop-shadow(0 -4px 20px rgba(var(--bs-dark-rgb), 0.4));
+  filter: drop-shadow(0 -4px 20px rgba(var(--bs-dark-rgb), 0.4));
   margin-left: auto;
   margin-right: -2rem;
 `;
-const InfoWrapper = styled.div`
+const InfoWrapperElement = styled.div`
   margin-top: 120px;
   @media (max-width: 991.98px) {
     margin-top: 0;
   }
 `;
-const Widget = styled.div`
+const WidgetElement = styled.div`
   position: relative;
   max-width: 650px;
   width: 95%;
@@ -83,18 +83,18 @@ const Widget = styled.div`
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--bs-gray-300);
   padding: 20px 0;
   margin-top: -50px;
   z-index: 999;
-  background: #fff;
-  box-shadow: 0 0 30px rgba(173, 181, 189, 0.4);
+  background: var(--bs-white);
+  box-shadow: 0 0 30px rgba(var(--bs-dark-rgb), 0.4);
   @media (max-width: 767.98px) {
     padding: 10px;
     margin-top: -32px;
   }
 `;
-const WidgetItem = styled.div`
+const WidgetItemElement = styled.div`
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -103,7 +103,7 @@ const WidgetItem = styled.div`
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
   text-align: center;
-  border-right: 1px solid #dee2e6;
+  border-right: 1px solid var(--bs-gray-300);
   :last-child {
     border-right: 0;
   }
@@ -130,9 +130,9 @@ export interface SectionWithContactsProps extends PageProps {
 }
 export const Header: FC<SectionWithContactsProps> = ({ sectionRef, contactsRef }) => {
   return (
-    <HeaderWrapper ref={sectionRef}>
-      <StyledContainer>
-        <InfoWrapper>
+    <HeaderWrapperElement ref={sectionRef}>
+      <StyledContainerElement>
+        <InfoWrapperElement>
           <SubTitle isContainer={true}>hello, I&apos;m</SubTitle>
           <Title isContainer={true}>Evaldas Laureckas</Title>
           <p>Software Developer</p>
@@ -154,22 +154,22 @@ export const Header: FC<SectionWithContactsProps> = ({ sectionRef, contactsRef }
           />
 
           <SocialLinks switchColors={false} className={'mt-4'} />
-        </InfoWrapper>
-        <ImgWrapper>
-          <StyledAvatarImg src={avatar} alt="Evaldas Laureckas" />
-        </ImgWrapper>
-      </StyledContainer>
+        </InfoWrapperElement>
+        <ImgWrapperElement>
+          <StyledAvatarImgElement src={avatar} alt="Evaldas Laureckas" />
+        </ImgWrapperElement>
+      </StyledContainerElement>
 
-      <Widget>
-        <WidgetItem className="widget-item">
+      <WidgetElement>
+        <WidgetItemElement className="widget-item">
           <h2>10</h2>
           <p>Years of Working Experience</p>
-        </WidgetItem>
-        <WidgetItem className="widget-item">
+        </WidgetItemElement>
+        <WidgetItemElement className="widget-item">
           <h2>6</h2>
           <p>Recommendations</p>
-        </WidgetItem>
-      </Widget>
-    </HeaderWrapper>
+        </WidgetItemElement>
+      </WidgetElement>
+    </HeaderWrapperElement>
   );
 };
