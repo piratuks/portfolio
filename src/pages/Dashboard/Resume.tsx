@@ -32,9 +32,9 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
 
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
-                  <StyledSubTitle isContainer={false}>Application Developer</StyledSubTitle>
+                  <StyledSubTitle isContainer={false}>Application Engineer</StyledSubTitle>
                   <Badge bg="secondary" pill>
-                    Jan 2021 - Present
+                    Dec 2022 - Present
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>

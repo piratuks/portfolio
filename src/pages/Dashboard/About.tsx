@@ -41,15 +41,15 @@ export const About: FC<PageProps> = ({ sectionRef }) => {
               <StyledListItem>Analyzing end user needs and then developing software to meet their needs</StyledListItem>
               <StyledListItem>Developing features across multiple applications</StyledListItem>
               <StyledListItem>Reviewing code for quality and adherence to standards</StyledListItem>
-              <StyledListItem>Responding promptly to reports of bugs</StyledListItem>
+              <StyledListItem>Respond promptly to reports of bugs</StyledListItem>
               <StyledListItem>Service level reporting</StyledListItem>
               <StyledListItem>Clearly communicating technical concepts</StyledListItem>
               <StyledListItem>Maintaining proper software configuration management</StyledListItem>
               <StyledListItem>Ensuring proper source code documentation</StyledListItem>
               <StyledListItem>Continuous deployment</StyledListItem>
-              <StyledListItem>Have experience in fully remote job/positions</StyledListItem>
+              <StyledListItem>Have experience in fully remote jobs/positions</StyledListItem>
               <StyledListItem>Experience in leading the team</StyledListItem>
-              <StyledListItem> Experience in teams within Enterprise / Start-up setup</StyledListItem>
+              <StyledListItem>Experience in teams within Enterprise / Start-up setup</StyledListItem>
             </ListGroup>
 
             <StyledButtons
