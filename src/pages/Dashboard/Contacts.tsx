@@ -1,6 +1,6 @@
 import { PageProps } from 'app/App';
-import { BtnType, StyledButtons } from 'components/ui/StyledButtons';
-import { StyledSection } from 'components/ui/StyledSection';
+import { BtnType, Buttons } from 'components/ui/Buttons';
+import { Section } from 'components/ui/Section';
 import { StyledSubTitle } from 'components/ui/StyledSubTitle';
 import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
@@ -120,7 +120,7 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
   };
 
   return (
-    <StyledSection sectionRef={sectionRef}>
+    <Section sectionRef={sectionRef}>
       <Container className="text-center">
         <StyledSubTitle isContainer={false}>Contact</StyledSubTitle>
         <StyledTitle isContainer={false} className={'mb-4'}>
@@ -140,7 +140,7 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
               <StyledFormGroup className="mb-3" controlId="formBasicMessage">
                 <Form.Control as="textarea" rows={5} type="text" placeholder="Message" size="lg" />
               </StyledFormGroup>
-              <StyledButtons
+              <Buttons
                 buttons={[
                   {
                     className: 'w-lg btn-block',
@@ -175,6 +175,6 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
           </StyledContactsBlock>
         </StyledContactBlock>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };

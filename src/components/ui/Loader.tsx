@@ -6,7 +6,7 @@ const StyledRow = styled(Row)`
   width: 100%;
 `;
 const StyledSpinner = styled(Spinner)`
-  background: #ff7a57;
+  background: var(--bs-primary);
 `;
 
 export const Loader = () => {

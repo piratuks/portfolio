@@ -1,6 +1,6 @@
 import { PageProps } from 'app/App';
-import { StyledCard } from 'components/ui/StyledCard';
-import { StyledSection } from 'components/ui/StyledSection';
+import { Card } from 'components/ui/Card';
+import { Section } from 'components/ui/Section';
 import { StyledSubTitle } from 'components/ui/StyledSubTitle';
 import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
@@ -21,7 +21,7 @@ const StyledCarousel = styled(Carousel)`
     box-shadow: 0 0 5px rgba(108, 117, 125, 0.3);
   }
 `;
-const StyledCardCustom = styled(StyledCard)`
+const CardCustom = styled(Card)`
   max-width: 700px;
   margin: 10px auto;
   padding: 20px 15px;
@@ -33,7 +33,7 @@ const StyledTitleH1 = styled.h1`
 
 export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
   return (
-    <StyledSection sectionRef={sectionRef}>
+    <Section sectionRef={sectionRef}>
       <Container className="text-center">
         <StyledSubTitle isContainer={false}>Testmonial</StyledSubTitle>
         <StyledTitle isContainer={false} className={'mb-4'}>
@@ -43,7 +43,7 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
 
         <StyledCarousel indicators={true}>
           <Carousel.Item interval={5000}>
-            <StyledCardCustom hasExtras={false} className={'mb-4'}>
+            <CardCustom hasExtras={false} className={'mb-4'}>
               <p className="pb-4">
                 I have managed Evaldas for 3,5 years now, and I can only say that I value him a lot as a person as well
                 as a great mentor & developer. As the lead developer, he was the driving force behind our
@@ -52,10 +52,10 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
               </p>
               <StyledTitleH1>Dirk Vermeiren</StyledTitleH1>
               <StyledSubTitle isContainer={false}>Chief Technology Officer at VaultSpeed</StyledSubTitle>
-            </StyledCardCustom>
+            </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
-            <StyledCardCustom hasExtras={false} className={'mb-4'}>
+            <CardCustom hasExtras={false} className={'mb-4'}>
               <p className="pb-4">
                 I&apos;ve been working with Evaldas for the past year and couldn&apos;t have better opinion about him -
                 Evaldas is an excellent person and professional. During this period Evaldas has proved multiple times
@@ -75,10 +75,10 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
               </p>
               <StyledTitleH1>Nuno Santos</StyledTitleH1>
               <StyledSubTitle isContainer={false}>VaultSpeed Development Team Manager</StyledSubTitle>
-            </StyledCardCustom>
+            </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
-            <StyledCardCustom hasExtras={false} className={'mb-4'}>
+            <CardCustom hasExtras={false} className={'mb-4'}>
               <p className="pb-4">
                 Having worked with Evaldas for a little more than a year, I must say he is an excellent professional.
                 Evaldas is an exceptional developer who possesses all the skills one would want in an excellent
@@ -89,10 +89,10 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
               </p>
               <StyledTitleH1>Ravi Sejling</StyledTitleH1>
               <StyledSubTitle isContainer={false}>Product Owner at Danske Bank</StyledSubTitle>
-            </StyledCardCustom>
+            </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
-            <StyledCardCustom hasExtras={false} className={'mb-4'}>
+            <CardCustom hasExtras={false} className={'mb-4'}>
               <p className="pb-4">
                 Evaldas is super “responsive” developer. I also appreciate that he is very proactive and really a Team
                 player, at the same time Evaldas is able to analyze, understand problems and make solution suggestions.
@@ -102,20 +102,20 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
               <StyledSubTitle isContainer={false}>
                 Head of Software Engineering | Innovation and Simplicity
               </StyledSubTitle>
-            </StyledCardCustom>
+            </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
-            <StyledCardCustom hasExtras={false} className={'mb-4'}>
+            <CardCustom hasExtras={false} className={'mb-4'}>
               <p className="pb-4">
                 Evaldas is a hardworking and diligent developer. Always keen to take feedback, take on new challenges
                 and work with the team to achieve best results for everyone. Its a pleasure to with with Evaldas.
               </p>
               <StyledTitleH1>Animesh Chowdhury</StyledTitleH1>
               <StyledSubTitle isContainer={false}>Tech entrepreneur, Seed Investor</StyledSubTitle>
-            </StyledCardCustom>
+            </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
-            <StyledCardCustom hasExtras={false} className={'mb-4'}>
+            <CardCustom hasExtras={false} className={'mb-4'}>
               <p className="pb-4">
                 We had the pleasure of working with Evaldas for approximately six months in 2018. Evaldas carried out
                 several pieces of work for us including JavaScript coding and C# coding. We were most impressed by his
@@ -125,10 +125,10 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
               </p>
               <StyledTitleH1>Lindsay Adam</StyledTitleH1>
               <StyledSubTitle isContainer={false}>Owner, PCByVoice</StyledSubTitle>
-            </StyledCardCustom>
+            </CardCustom>
           </Carousel.Item>
         </StyledCarousel>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };

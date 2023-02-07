@@ -1,5 +1,5 @@
-import { StyledCard } from 'components/ui/StyledCard';
-import { StyledSection } from 'components/ui/StyledSection';
+import { Card } from 'components/ui/Card';
+import { Section } from 'components/ui/Section';
 import { StyledSubTitle } from 'components/ui/StyledSubTitle';
 import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
@@ -72,13 +72,13 @@ const StyledLink = styled(Link)`
 
 export const Skills: FC = () => {
   return (
-    <StyledSection>
+    <Section>
       <Container className="text-center">
         <StyledSubTitle isContainer={false}>Skills</StyledSubTitle>
         <StyledTitle isContainer={false} className={'mb-4'}>
           Why Choose me
         </StyledTitle>
-        <StyledCard hasExtras={false} className={'mb-4'}>
+        <Card hasExtras={false} className={'mb-4'}>
           <StyledSubTitle isContainer={false}>
             These are, but not limited to, the tech I use for building client-side applications
           </StyledSubTitle>
@@ -135,8 +135,8 @@ export const Skills: FC = () => {
               <SiXamarin />
             </StyledLink>
           </SkillWrapper>
-        </StyledCard>
-        <StyledCard hasExtras={false} className={'mb-4'}>
+        </Card>
+        <Card hasExtras={false} className={'mb-4'}>
           <StyledSubTitle isContainer={false}>
             These are, but not limited to, the tech I use for building fast and scalable backend applications
           </StyledSubTitle>
@@ -184,8 +184,8 @@ export const Skills: FC = () => {
               <SiCakephp />
             </StyledLink>
           </SkillWrapper>
-        </StyledCard>
-        <StyledCard hasExtras={false} className={'mb-4'}>
+        </Card>
+        <Card hasExtras={false} className={'mb-4'}>
           <StyledSubTitle isContainer={false}>Others...and more!</StyledSubTitle>
           <SkillWrapper>
             <StyledLink to="https://www.selenium.dev/" target="_blank">
@@ -249,8 +249,8 @@ export const Skills: FC = () => {
               <SiPostman />
             </StyledLink>
           </SkillWrapper>
-        </StyledCard>
+        </Card>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };

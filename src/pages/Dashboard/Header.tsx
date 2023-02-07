@@ -1,6 +1,6 @@
 import { PageProps } from 'app/App';
 import avatar from 'assets/avatar.svg';
-import { BtnType, StyledButtons } from 'components/ui/StyledButtons';
+import { BtnType, Buttons } from 'components/ui/Buttons';
 import { StyledSocialLinks } from 'components/ui/StyledSocialLinks';
 import { StyledSubTitle } from 'components/ui/StyledSubTitle';
 import { StyledTitle } from 'components/ui/StyledTitle';
@@ -137,7 +137,7 @@ export const Header: FC<SectionWithContactsProps> = ({ sectionRef, contactsRef }
           <StyledTitle isContainer={true}>Evaldas Laureckas</StyledTitle>
           <p>Software Developer</p>
 
-          <StyledButtons
+          <Buttons
             className={'pt-3'}
             buttons={[
               {

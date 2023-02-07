@@ -1,13 +1,13 @@
 import { PageProps } from 'app/App';
-import { StyledCard } from 'components/ui/StyledCard';
-import { StyledSection } from 'components/ui/StyledSection';
+import { Card } from 'components/ui/Card';
+import { Section } from 'components/ui/Section';
 import { StyledSubTitle } from 'components/ui/StyledSubTitle';
 import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
 import { Badge, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
-const StyledCardTitle = styled(StyledTitle)`
+const CardTitle = styled(StyledTitle)`
   color: #ff7a57;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
@@ -15,7 +15,7 @@ const StyledCardTitle = styled(StyledTitle)`
 
 export const Resume: FC<PageProps> = ({ sectionRef }) => {
   return (
-    <StyledSection sectionRef={sectionRef}>
+    <Section sectionRef={sectionRef}>
       <Container className="text-center">
         <StyledSubTitle isContainer={false}>Experience</StyledSubTitle>
         <StyledTitle isContainer={false} className={'mb-4'}>
@@ -23,8 +23,8 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
         </StyledTitle>
         <Row>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>Chevron Corporation</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>Chevron Corporation</CardTitle>
               <StyledSubTitle isContainer={false}>Remote, Contract</StyledSubTitle>
               <Badge bg="primary" pill>
                 Current
@@ -38,11 +38,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>Danske Bank</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>Danske Bank</CardTitle>
               <StyledSubTitle isContainer={false}>Remote, Contract, 2 year 1 months</StyledSubTitle>
               {/* <Badge bg="primary" pill>
                 Current
@@ -56,11 +56,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>VaultSpeed</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>VaultSpeed</CardTitle>
               <StyledSubTitle isContainer={false}>Remote, Contract, 2 years 4 months</StyledSubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -76,11 +76,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>Elsis Pro</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>Elsis Pro</CardTitle>
               <StyledSubTitle isContainer={false}>Remote, Contract, 9 months</StyledSubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -90,11 +90,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>The Good Till Co</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>The Good Till Co</CardTitle>
               <StyledSubTitle isContainer={false}>Remote, Contract, 1 year 2 months</StyledSubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -104,11 +104,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>PCByVoice LTD</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>PCByVoice LTD</CardTitle>
               <StyledSubTitle isContainer={false}>Remote, Contract, 7 months</StyledSubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -118,11 +118,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>STMCB Limited t/a Inspiratia</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>STMCB Limited t/a Inspiratia</CardTitle>
               <StyledSubTitle isContainer={false}>Remote, Contract, 6 months</StyledSubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -132,11 +132,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>UAB Omega Technology</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>UAB Omega Technology</CardTitle>
               <StyledSubTitle isContainer={false}>Employment, Onsite, 5 years 7 months</StyledSubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -152,11 +152,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>LaunchMen</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>LaunchMen</CardTitle>
               <StyledSubTitle isContainer={false}>Remote, Contract, 2 months</StyledSubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -166,11 +166,11 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
           <Col sm={12} md={6} className="mb-4">
-            <StyledCard hasExtras={false} className={'mb-4'}>
-              <StyledCardTitle isContainer={false}>VŠĮ Technology and Business School</StyledCardTitle>
+            <Card hasExtras={false} className={'mb-4'}>
+              <CardTitle isContainer={false}>VŠĮ Technology and Business School</CardTitle>
               <StyledSubTitle isContainer={false}>Employment, Onsite, 1 months</StyledSubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
@@ -180,10 +180,10 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
-            </StyledCard>
+            </Card>
           </Col>
         </Row>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };

@@ -1,7 +1,7 @@
 import { PageProps } from 'app/App';
 import { scope } from 'app/constant';
-import { BtnType, StyledButtons } from 'components/ui/StyledButtons';
-import { StyledSection } from 'components/ui/StyledSection';
+import { BtnType, Buttons } from 'components/ui/Buttons';
+import { Section } from 'components/ui/Section';
 import { StyledSubTitle } from 'components/ui/StyledSubTitle';
 import { StyledTitle } from 'components/ui/StyledTitle';
 import { FC } from 'react';
@@ -15,7 +15,7 @@ const StyledListItem = styled(ListGroup.Item)`
 `;
 export const About: FC<PageProps> = ({ sectionRef }) => {
   return (
-    <StyledSection className={'mt-3'} sectionRef={sectionRef}>
+    <Section className={'mt-3'} sectionRef={sectionRef}>
       <Container className="mt-5">
         <Row className="text-center text-md-start">
           <Col md={3}>
@@ -52,7 +52,7 @@ export const About: FC<PageProps> = ({ sectionRef }) => {
               <StyledListItem>Experience in teams within Enterprise / Start-up setup</StyledListItem>
             </ListGroup>
 
-            <StyledButtons
+            <Buttons
               buttons={[
                 {
                   className: 'mt-3',
@@ -65,6 +65,6 @@ export const About: FC<PageProps> = ({ sectionRef }) => {
           </Col>
         </Row>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };

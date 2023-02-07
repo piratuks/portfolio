@@ -1,5 +1,6 @@
 import logoWhite from 'assets/logo-white.svg';
-import { BtnType, StyledButtons } from 'components/ui/StyledButtons';
+import { BtnType, Buttons } from 'components/ui/Buttons';
+import { LogoImgElement } from 'components/ui/Logo';
 import { StyledSocialLinks } from 'components/ui/StyledSocialLinks';
 import { StyledSubTitle } from 'components/ui/StyledSubTitle';
 import { StyledTitle } from 'components/ui/StyledTitle';
@@ -9,9 +10,9 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { FaRegCopyright } from 'react-icons/fa';
 import styled from 'styled-components';
 
-const StyledFooterWrapper = styled.footer`
-  background: #ff7a57;
-  min-height: 500px;
+const StyledFooterWrapperElement = styled.footer`
+  background: var(--bs-primary);
+  min-height: 550px;
   padding-top: 10rem;
   @media (max-width: 767.98px) {
     .page-footer {
@@ -19,49 +20,45 @@ const StyledFooterWrapper = styled.footer`
     }
   }
 `;
-const StyledLogoImg = styled.img`
+const StyledLogoElement = styled(LogoImgElement)`
   width: 300px;
-  -webkit-filter: drop-shadow(1px 2px 25px rgba(206, 212, 218, 0.9));
-  filter: drop-shadow(1px 2px 25px rgba(206, 212, 218, 0.9));
-  cursor: pointer;
 `;
-const StyledTitleH1 = styled.h1`
-  color: white;
+const StyledTitleH1Element = styled.h1`
+  color: var(--bs-white);
   font-size: 20px;
   opacity: 0.8;
 `;
-const StyledNewSocialLinks = styled(StyledSocialLinks)`
+const StyledNewSocialLinksElement = styled(StyledSocialLinks)`
   justify-content: center;
   align-items: center;
 `;
-const StyledHireMeContainer = styled(Container)`
+const StyledHireMeContainerElement = styled(Container)`
   position: absolute;
   max-width: 1000px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 `;
-const StyledHireMeBox = styled.div`
+const StyledHireMeBoxElement = styled.div`
   padding: 3.5rem 1.25rem;
   margin-top: -5rem;
-  background-color: #343a40;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #141c3a;
+  background-color: var(--bs-dark);
+  box-shadow: 0 5px 5px 0 rgba(var(--bs-dark-rgb), 0.2), 0 0 0 1px var(--bs-dark);
   border-radius: 12px;
-  color: white;
+  color: var(--bs-white);
   display: block;
 `;
-const StyledTitleCustomized = styled(StyledTitle)`
+const StyledTitleCustomizedElement = styled(StyledTitle)`
   font-weight: 800;
 `;
-
 export const AppFooter: FC<SectionWithContactsProps> = ({ sectionRef, contactsRef }) => {
   return (
     <>
-      <StyledHireMeContainer>
-        <StyledHireMeBox>
+      <StyledHireMeContainerElement>
+        <StyledHireMeBoxElement>
           <Row className="justify-content-center align-items-center">
             <Col sm={6} md={3}>
-              <StyledTitleCustomized isContainer={false}>Start a projects</StyledTitleCustomized>
+              <StyledTitleCustomizedElement isContainer={false}>Start a projects</StyledTitleCustomizedElement>
             </Col>
             <Col sm={6} md={4}>
               <StyledSubTitle isContainer={false}>
@@ -69,7 +66,7 @@ export const AppFooter: FC<SectionWithContactsProps> = ({ sectionRef, contactsRe
               </StyledSubTitle>
             </Col>
             <Col sm={6} md={3}>
-              <StyledButtons
+              <Buttons
                 className={'pt-3'}
                 buttons={[
                   {
@@ -82,13 +79,13 @@ export const AppFooter: FC<SectionWithContactsProps> = ({ sectionRef, contactsRe
               />
             </Col>
           </Row>
-        </StyledHireMeBox>
-      </StyledHireMeContainer>
-      <StyledFooterWrapper>
+        </StyledHireMeBoxElement>
+      </StyledHireMeContainerElement>
+      <StyledFooterWrapperElement>
         <Container>
           <Row>
             <Col className="text-center">
-              <StyledLogoImg
+              <StyledLogoElement
                 src={logoWhite}
                 alt="Evaldas Laureckas Software Development"
                 onClick={() => {
@@ -99,23 +96,23 @@ export const AppFooter: FC<SectionWithContactsProps> = ({ sectionRef, contactsRe
           </Row>
           <Row className="mb-4">
             <Col className="text-center">
-              <StyledTitleH1>Let&apos;s tackle challenges together!!!</StyledTitleH1>
+              <StyledTitleH1Element>Let&apos;s tackle challenges together!!!</StyledTitleH1Element>
             </Col>
           </Row>
           <Row className="mb-4">
             <Col className="text-center">
-              <StyledNewSocialLinks switchColors={true} />
+              <StyledNewSocialLinksElement switchColors={true} />
             </Col>
           </Row>
           <Row className="mb-4">
             <Col className="text-center">
-              <StyledTitleH1>
+              <StyledTitleH1Element>
                 Copyright 2023 <FaRegCopyright /> and Handcrafted by me &quot;Evaldas Laureckas&quot;
-              </StyledTitleH1>
+              </StyledTitleH1Element>
             </Col>
           </Row>
         </Container>
-      </StyledFooterWrapper>
+      </StyledFooterWrapperElement>
     </>
   );
 };
