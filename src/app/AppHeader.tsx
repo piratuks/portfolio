@@ -106,20 +106,12 @@ export const AppHeader: FC<AppProps> = ({ sectionRefs }) => {
                   sectionRefs[4].current?.scrollIntoView();
                 }}
               >
-                Portfolio
+                Testmonial
               </SyledNavLink>
               <SyledNavLink
                 className={activeSection === 5 ? 'active' : ''}
                 onClick={() => {
                   sectionRefs[5].current?.scrollIntoView();
-                }}
-              >
-                Testmonial
-              </SyledNavLink>
-              <SyledNavLink
-                className={activeSection === 6 ? 'active' : ''}
-                onClick={() => {
-                  sectionRefs[6].current?.scrollIntoView();
                 }}
               >
                 Contacts

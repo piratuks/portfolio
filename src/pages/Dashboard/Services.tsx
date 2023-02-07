@@ -46,7 +46,7 @@ export const Services: FC<PageProps> = ({ sectionRef }) => {
               <StyledCardTitle isContainer={false}>Frontend</StyledCardTitle>
               <StyledCardSubTitle className="subtitle">
                 I am capable to develop solutions with any modern frontend framework. Most knowledge i have with
-                Angular, Vue, Knockout, React
+                Angular, Vue, Knockout, React.
               </StyledCardSubTitle>
             </StyledCard>
           </Col>
@@ -55,7 +55,7 @@ export const Services: FC<PageProps> = ({ sectionRef }) => {
               <ServiceImg src={backend} alt="Backend development" />
               <StyledCardTitle isContainer={false}>Backend</StyledCardTitle>
               <StyledCardSubTitle className="subtitle">
-                I am capable to develop BE solutions with microsoft stack, php or node. However i am not limiting myself
+                I am capable to develop BE solutions with Microsoft stack, PHP or Node. However i am not limiting myself
                 to only these technologies.
               </StyledCardSubTitle>
             </StyledCard>
@@ -75,7 +75,7 @@ export const Services: FC<PageProps> = ({ sectionRef }) => {
               <ServiceImg src={mobile} alt="Mobile development" />
               <StyledCardTitle isContainer={false}>Mobile</StyledCardTitle>
               <StyledCardSubTitle className="subtitle">
-                I worked on multiple mobile applications durring my career. Most knowleged i have with ionic, xamarin
+                I worked on multiple mobile applications durring my career. Most knowleged i have with Ionic, Xamarin.
               </StyledCardSubTitle>
             </StyledCard>
           </Col>

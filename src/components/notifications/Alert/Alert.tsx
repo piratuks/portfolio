@@ -3,11 +3,6 @@ import { Toast } from 'react-bootstrap';
 import CloseButton from 'react-bootstrap/CloseButton';
 import styled from 'styled-components';
 
-const StyledWrapper = styled.div`
-  .bg-danger {
-    background-color: #f85c70 !important;
-  }
-`;
 const StyledToast = styled(Toast)`
   background-color: #f85c70 !important;
 `;
