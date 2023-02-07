@@ -1,20 +1,20 @@
 import { Col, Row, Spinner } from 'react-bootstrap';
 import styled from 'styled-components';
 
-const StyledRow = styled(Row)`
+const StyledRowElement = styled(Row)`
   height: 100%;
   width: 100%;
 `;
-const StyledSpinner = styled(Spinner)`
+const StyledSpinnerElement = styled(Spinner)`
   background: var(--bs-primary);
 `;
 
 export const Loader = () => {
   return (
-    <StyledRow className="d-flex align-items-center ">
+    <StyledRowElement className="d-flex align-items-center ">
       <Col className="d-flex justify-content-center">
-        <StyledSpinner animation="grow" />
+        <StyledSpinnerElement animation="grow" />
       </Col>
-    </StyledRow>
+    </StyledRowElement>
   );
 };

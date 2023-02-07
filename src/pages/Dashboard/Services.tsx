@@ -5,13 +5,13 @@ import fullstack from 'assets/fullstack.svg';
 import mobile from 'assets/mobile.svg';
 import { Card } from 'components/ui/Card';
 import { Section } from 'components/ui/Section';
-import { StyledSubTitle } from 'components/ui/StyledSubTitle';
-import { StyledTitle } from 'components/ui/StyledTitle';
+import { SubTitle } from 'components/ui/SubTitle';
+import { Title } from 'components/ui/Title';
 import { FC } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
-const CardTitle = styled(StyledTitle)`
+const CardTitle = styled(Title)`
   color: #ff7a57;
 `;
 const CardSubTitle = styled.div`
@@ -35,10 +35,10 @@ export const Services: FC<PageProps> = ({ sectionRef }) => {
   return (
     <Section sectionRef={sectionRef}>
       <Container className="text-center">
-        <StyledSubTitle isContainer={false}>Service</StyledSubTitle>
-        <StyledTitle isContainer={false} className={'mb-4'}>
+        <SubTitle isContainer={false}>Service</SubTitle>
+        <Title isContainer={false} className={'mb-4'}>
           What I Do
-        </StyledTitle>
+        </Title>
         <Row>
           <Col sm={6} md={3} className="mb-4">
             <Card hasExtras={true}>

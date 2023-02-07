@@ -1,8 +1,8 @@
 import { PageProps } from 'app/App';
 import { BtnType, Buttons } from 'components/ui/Buttons';
 import { Section } from 'components/ui/Section';
-import { StyledSubTitle } from 'components/ui/StyledSubTitle';
-import { StyledTitle } from 'components/ui/StyledTitle';
+import { SubTitle } from 'components/ui/SubTitle';
+import { Title } from 'components/ui/Title';
 import { FC } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import { SlLocationPin } from 'react-icons/sl';
@@ -122,10 +122,10 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
   return (
     <Section sectionRef={sectionRef}>
       <Container className="text-center">
-        <StyledSubTitle isContainer={false}>Contact</StyledSubTitle>
-        <StyledTitle isContainer={false} className={'mb-4'}>
+        <SubTitle isContainer={false}>Contact</SubTitle>
+        <Title isContainer={false} className={'mb-4'}>
           Get In Touch With Me
-        </StyledTitle>
+        </Title>
         <p className="mb-5 pb-4">Thanks for taking the time to reach out. How can I help you today?</p>
 
         <StyledContactBlock className="text-start">

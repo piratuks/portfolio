@@ -1,8 +1,8 @@
 import { PageProps } from 'app/App';
 import { Card } from 'components/ui/Card';
 import { Section } from 'components/ui/Section';
-import { StyledSubTitle } from 'components/ui/StyledSubTitle';
-import { StyledTitle } from 'components/ui/StyledTitle';
+import { SubTitle } from 'components/ui/SubTitle';
+import { Title } from 'components/ui/Title';
 import { FC } from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -35,10 +35,10 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
   return (
     <Section sectionRef={sectionRef}>
       <Container className="text-center">
-        <StyledSubTitle isContainer={false}>Testmonial</StyledSubTitle>
-        <StyledTitle isContainer={false} className={'mb-4'}>
+        <SubTitle isContainer={false}>Testmonial</SubTitle>
+        <Title isContainer={false} className={'mb-4'}>
           What People Say About Me
-        </StyledTitle>
+        </Title>
         <p className="mb-5 pb-4">People I&apos;ve worked with have said some nice things...</p>
 
         <StyledCarousel indicators={true}>
@@ -51,7 +51,7 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
                 enthusiasm, energy, motivation, speed & quality of delivery are for me his strongest points.
               </p>
               <StyledTitleH1>Dirk Vermeiren</StyledTitleH1>
-              <StyledSubTitle isContainer={false}>Chief Technology Officer at VaultSpeed</StyledSubTitle>
+              <SubTitle isContainer={false}>Chief Technology Officer at VaultSpeed</SubTitle>
             </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -74,7 +74,7 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
                 from you only one outcome is possible, the success! Best wishes!
               </p>
               <StyledTitleH1>Nuno Santos</StyledTitleH1>
-              <StyledSubTitle isContainer={false}>VaultSpeed Development Team Manager</StyledSubTitle>
+              <SubTitle isContainer={false}>VaultSpeed Development Team Manager</SubTitle>
             </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -88,7 +88,7 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
                 improvements. Plus, Evaldas is self-motivated and a great team player.
               </p>
               <StyledTitleH1>Ravi Sejling</StyledTitleH1>
-              <StyledSubTitle isContainer={false}>Product Owner at Danske Bank</StyledSubTitle>
+              <SubTitle isContainer={false}>Product Owner at Danske Bank</SubTitle>
             </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -99,9 +99,7 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
                 Excellent communication with other developers within the project!
               </p>
               <StyledTitleH1>Žilvinas Grigonis</StyledTitleH1>
-              <StyledSubTitle isContainer={false}>
-                Head of Software Engineering | Innovation and Simplicity
-              </StyledSubTitle>
+              <SubTitle isContainer={false}>Head of Software Engineering | Innovation and Simplicity</SubTitle>
             </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -111,7 +109,7 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
                 and work with the team to achieve best results for everyone. Its a pleasure to with with Evaldas.
               </p>
               <StyledTitleH1>Animesh Chowdhury</StyledTitleH1>
-              <StyledSubTitle isContainer={false}>Tech entrepreneur, Seed Investor</StyledSubTitle>
+              <SubTitle isContainer={false}>Tech entrepreneur, Seed Investor</SubTitle>
             </CardCustom>
           </Carousel.Item>
           <Carousel.Item interval={5000}>
@@ -124,7 +122,7 @@ export const Testmonial: FC<PageProps> = ({ sectionRef }) => {
                 with our company.
               </p>
               <StyledTitleH1>Lindsay Adam</StyledTitleH1>
-              <StyledSubTitle isContainer={false}>Owner, PCByVoice</StyledSubTitle>
+              <SubTitle isContainer={false}>Owner, PCByVoice</SubTitle>
             </CardCustom>
           </Carousel.Item>
         </StyledCarousel>

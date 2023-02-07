@@ -2,8 +2,8 @@ import { PageProps } from 'app/App';
 import { scope } from 'app/constant';
 import { BtnType, Buttons } from 'components/ui/Buttons';
 import { Section } from 'components/ui/Section';
-import { StyledSubTitle } from 'components/ui/StyledSubTitle';
-import { StyledTitle } from 'components/ui/StyledTitle';
+import { SubTitle } from 'components/ui/SubTitle';
+import { Title } from 'components/ui/Title';
 import { FC } from 'react';
 import { Col, Container, ListGroup, Row } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -26,8 +26,8 @@ export const About: FC<PageProps> = ({ sectionRef }) => {
             />
           </Col>
           <Col md={9} className="ps-md-4">
-            <StyledTitle isContainer={false}>Evaldas Laureckas</StyledTitle>
-            <StyledSubTitle isContainer={false}>Software Developer</StyledSubTitle>
+            <Title isContainer={false}>Evaldas Laureckas</Title>
+            <SubTitle isContainer={false}>Software Developer</SubTitle>
             <p>
               Master’s degree within marine engineering and bachelor’s degree from faculty of natural science,
               mathematics computer science department. I am an Innovative software engineer offering over ten years of

@@ -18,8 +18,8 @@ const StyledTitleElementContainer = styled(StyledTitleElement)`
 interface Props extends ContainerProps {
   className?: string;
 }
-export const StyledTitle: FC<Props> = ({ isContainer, children, className }) => {
-  let StyledNewTitleElement = StyledTitleElement;
-  if (isContainer) StyledNewTitleElement = StyledTitleElementContainer;
-  return <StyledNewTitleElement className={className ?? ''}>{children}</StyledNewTitleElement>;
+export const Title: FC<Props> = ({ isContainer, children, className }) => {
+  let StyledElement = StyledTitleElement;
+  if (isContainer) StyledElement = StyledTitleElementContainer;
+  return <StyledElement className={className ?? ''}>{children}</StyledElement>;
 };

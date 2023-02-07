@@ -1,9 +1,9 @@
 import logoWhite from 'assets/logo-white.svg';
 import { BtnType, Buttons } from 'components/ui/Buttons';
 import { LogoImgElement } from 'components/ui/Logo';
-import { StyledSocialLinks } from 'components/ui/StyledSocialLinks';
-import { StyledSubTitle } from 'components/ui/StyledSubTitle';
-import { StyledTitle } from 'components/ui/StyledTitle';
+import { SocialLinks } from 'components/ui/SocialLinks';
+import { SubTitle } from 'components/ui/SubTitle';
+import { Title } from 'components/ui/Title';
 import { SectionWithContactsProps } from 'pages/Dashboard/Header';
 import { FC } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -28,7 +28,7 @@ const StyledTitleH1Element = styled.h1`
   font-size: 20px;
   opacity: 0.8;
 `;
-const StyledNewSocialLinksElement = styled(StyledSocialLinks)`
+const StyledNewSocialLinksElement = styled(SocialLinks)`
   justify-content: center;
   align-items: center;
 `;
@@ -48,7 +48,7 @@ const StyledHireMeBoxElement = styled.div`
   color: var(--bs-white);
   display: block;
 `;
-const StyledTitleCustomizedElement = styled(StyledTitle)`
+const StyledTitleCustomizedElement = styled(Title)`
   font-weight: 800;
 `;
 export const AppFooter: FC<SectionWithContactsProps> = ({ sectionRef, contactsRef }) => {
@@ -61,9 +61,9 @@ export const AppFooter: FC<SectionWithContactsProps> = ({ sectionRef, contactsRe
               <StyledTitleCustomizedElement isContainer={false}>Start a projects</StyledTitleCustomizedElement>
             </Col>
             <Col sm={6} md={4}>
-              <StyledSubTitle isContainer={false}>
+              <SubTitle isContainer={false}>
                 Interested in working together? We should queue up a time to chat.
-              </StyledSubTitle>
+              </SubTitle>
             </Col>
             <Col sm={6} md={3}>
               <Buttons

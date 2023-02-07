@@ -1,9 +1,9 @@
 import { PageProps } from 'app/App';
 import avatar from 'assets/avatar.svg';
 import { BtnType, Buttons } from 'components/ui/Buttons';
-import { StyledSocialLinks } from 'components/ui/StyledSocialLinks';
-import { StyledSubTitle } from 'components/ui/StyledSubTitle';
-import { StyledTitle } from 'components/ui/StyledTitle';
+import { SocialLinks } from 'components/ui/SocialLinks';
+import { SubTitle } from 'components/ui/SubTitle';
+import { Title } from 'components/ui/Title';
 import { FC } from 'react';
 import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -133,8 +133,8 @@ export const Header: FC<SectionWithContactsProps> = ({ sectionRef, contactsRef }
     <HeaderWrapper ref={sectionRef}>
       <StyledContainer>
         <InfoWrapper>
-          <StyledSubTitle isContainer={true}>hello, I&apos;m</StyledSubTitle>
-          <StyledTitle isContainer={true}>Evaldas Laureckas</StyledTitle>
+          <SubTitle isContainer={true}>hello, I&apos;m</SubTitle>
+          <Title isContainer={true}>Evaldas Laureckas</Title>
           <p>Software Developer</p>
 
           <Buttons
@@ -153,7 +153,7 @@ export const Header: FC<SectionWithContactsProps> = ({ sectionRef, contactsRef }
             ]}
           />
 
-          <StyledSocialLinks switchColors={false} className={'mt-4'} />
+          <SocialLinks switchColors={false} className={'mt-4'} />
         </InfoWrapper>
         <ImgWrapper>
           <StyledAvatarImg src={avatar} alt="Evaldas Laureckas" />
