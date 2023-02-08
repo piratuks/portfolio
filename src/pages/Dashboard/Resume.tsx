@@ -59,7 +59,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
           <Col sm={12} md={6} className="mb-4">
             <Card hasExtras={false} className={'mb-4'}>
               <CardTitleElement isContainer={false}>VaultSpeed</CardTitleElement>
-              <SubTitle isContainer={false}>Remote, Contract, 2 years 4 months</SubTitle>
+              <SubTitle isContainer={false}>Remote, Contract, 3 years 7 months</SubTitle>
               <ListGroup variant="flush" className="pt-4">
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
                   <SubTitle isContainer={false}>Lead Frontend Developer</SubTitle>
