@@ -6,7 +6,6 @@ import { AlertCode, apiErrorToast } from 'state/alertHelper';
 import { useFetchConfigurationQuery } from 'state/configurationApi';
 import { configurationLoaded, selectIsconfigurationInitialized } from 'state/configurationSlice';
 import { useAppDispatch, useAppSelector } from 'state/configureStore';
-
 import { AppFooter } from './AppFooter';
 import { AppHeader } from './AppHeader';
 import { AppRoutes } from './AppRoutes';
