@@ -10,7 +10,7 @@ const StyledCardElement = styled(BoostrapCard)`
   border-radius: 3px;
 `;
 const StyledCardElementExtra = styled(StyledCardElement)`
-  min-height: 230px;
+  min-height: 250px;
   :hover img {
     margin-top: 5px;
     width: 45px;

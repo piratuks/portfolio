@@ -22,6 +22,7 @@ const CardSubTitleElements = styled.div`
   visibility: hidden;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
+  padding: 5px;
 `;
 const ServiceImg = styled.img`
   margin-top: 40px;
