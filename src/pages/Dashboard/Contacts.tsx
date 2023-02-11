@@ -1,15 +1,16 @@
 import emailjs from '@emailjs/browser';
 import { PageProps } from 'app/App';
+import { AlertCode, AlertType } from 'components/notifications/Alert/Alert';
 import { BtnType, Buttons } from 'components/ui/Buttons';
 import { Loader } from 'components/ui/Loader';
 import { Section } from 'components/ui/Section';
 import { SubTitle } from 'components/ui/SubTitle';
 import { Title } from 'components/ui/Title';
-import { FC, useRef, useState } from 'react';
+import React, { FC, useRef, useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import { SlLocationPin } from 'react-icons/sl';
 import { TfiEmail } from 'react-icons/tfi';
-import { AlertCode, apiErrorToast, successToast } from 'state/alertHelper';
+import { alertAdd } from 'state/alertSlice';
 import { useAppDispatch } from 'state/configureStore';
 import styled from 'styled-components';
 
@@ -118,7 +119,8 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
   const form = useRef(null);
   const dispatch = useAppDispatch();
   const [isLoading, setLoading] = useState(false);
-  const handleSubmit = (event: any) => {
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (
@@ -128,30 +130,53 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
       process.env.REACT_APP_EMAIL_SERVICE_ID
     ) {
       setLoading(true);
+      const target = event.target as typeof event.target & {
+        user_name: { value: string };
+        message: { value: string };
+        user_email: { value: string };
+      };
+      const message = target.message.value;
+      const user_name = target.user_name.value;
+      const user_email = target.user_email.value;
+
       emailjs
         .send(
           process.env.REACT_APP_EMAIL_SERVICE_ID,
           process.env.REACT_APP_EMAIL_TEMPLATE_ID,
           {
-            user_name: event.target.user_name.value,
-            message: event.target.message.value,
-            user_email: event.target.user_email.value
+            user_name: user_name,
+            message: message,
+            user_email: user_email
           },
           process.env.REACT_APP_EMAIL_PUBLIC_ID
         )
         .then(
           result => {
             setLoading(false);
-            successToast({ message: result.text, id: AlertCode.successEmail, dispatcher: dispatch });
+            dispatch(
+              alertAdd({
+                isOpen: true,
+                message: result.text,
+                id: AlertCode.successEmail,
+                type: AlertType.success
+              })
+            );
           },
           error => {
             setLoading(false);
-            apiErrorToast({ error, message: error.text, id: AlertCode.failedSentEmail, dispatcher: dispatch });
+            dispatch(
+              alertAdd({
+                isOpen: true,
+                message: error.text,
+                id: AlertCode.failedSentEmail,
+                type: AlertType.danger
+              })
+            );
           }
         );
     }
-
-    event.target.reset();
+    const htmlForm = event.currentTarget;
+    htmlForm.reset();
   };
 
   return (

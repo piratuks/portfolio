@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AlertProps } from 'components/notifications/Alert/Alert';
+import { AlertCode, AlertProps } from 'components/notifications/Alert/Alert';
 import { RootState } from './configureStore';
 
-export interface AlertPropsExtension extends AlertProps {
-  id: string;
+interface AlertPropsExtension extends AlertProps {
+  id: AlertCode;
 }
 export interface AlertState {
   list: AlertPropsExtension[];

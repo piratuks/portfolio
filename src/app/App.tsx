@@ -1,8 +1,10 @@
+import { AlertCode, AlertType } from 'components/notifications/Alert/Alert';
 import { AlertContainer } from 'components/notifications/Alert/AlertContainer';
 import { Loader } from 'components/ui/Loader';
 import { FC, useEffect, useRef } from 'react';
 import { Container } from 'react-bootstrap';
-import { AlertCode, apiErrorToast } from 'state/alertHelper';
+import { alertAdd } from 'state/alertSlice';
+import { isSerializedError } from 'state/apiError';
 import { useFetchConfigurationQuery } from 'state/configurationApi';
 import { configurationLoaded, selectIsconfigurationInitialized } from 'state/configurationSlice';
 import { useAppDispatch, useAppSelector } from 'state/configureStore';
@@ -26,7 +28,21 @@ export const App: FC = () => {
     if (data) dispatch(configurationLoaded(data));
   }, [data]);
 
-  if (error) apiErrorToast({ error, id: AlertCode.configError, dispatcher: dispatch });
+  if (error) {
+    let msg = 'Something happened durring request';
+    if (isSerializedError(error) && error.message) {
+      msg = error.message;
+    }
+    dispatch(
+      alertAdd({
+        isOpen: true,
+        message: msg,
+        id: AlertCode.configError,
+        type: AlertType.danger
+      })
+    );
+  }
+
   if (!error && (isFetching || !isInitialized)) return <Loader />;
 
   return (

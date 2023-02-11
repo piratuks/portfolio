@@ -13,6 +13,7 @@ export const AlertContainer: FC = () => {
         return (
           <Alert
             type={alert.type}
+            id={alert.id}
             key={alert.id}
             autohide={alert.autohide}
             isOpen={alert.isOpen}
