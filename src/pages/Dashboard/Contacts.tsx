@@ -151,7 +151,7 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
           process.env.REACT_APP_EMAIL_PUBLIC_ID
         )
         .then(
-          result => {
+          () => {
             setLoading(false);
             dispatch(
               alertAdd({
