@@ -156,7 +156,7 @@ export const Contacts: FC<PageProps> = ({ sectionRef }) => {
             dispatch(
               alertAdd({
                 isOpen: true,
-                message: result.text,
+                message: 'The message has been sent',
                 id: AlertCode.successEmail,
                 type: AlertType.success
               })
