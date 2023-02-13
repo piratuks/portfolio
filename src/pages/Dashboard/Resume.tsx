@@ -50,7 +50,7 @@ export const Resume: FC<PageProps> = ({ sectionRef }) => {
                 <ListGroup.Item className="d-flex justify-content-between align-items-start">
                   <SubTitle isContainer={false}>Senior Frontend Developer</SubTitle>
                   <Badge bg="secondary" pill>
-                    Feb 2021 - Dec 2023
+                    Feb 2021 - Dec 2022
                   </Badge>
                 </ListGroup.Item>
               </ListGroup>
